@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#cafd00",
+              "surface-container-low": "#131313",
+              "on-tertiary-fixed-variant": "#760037",
+              "inverse-surface": "#fcf9f8",
+              "primary": "#f3ffca",
+              "inverse-primary": "#516700",
+              "surface-container-highest": "#262626",
+              "tertiary-container": "#ff067f",
+              "surface-container-high": "#201f1f",
+              "surface-container-lowest": "#000000",
+              "on-secondary": "#005359",
+              "on-error": "#450900",
+              "on-secondary-fixed-variant": "#005e64",
+              "background": "#0e0e0e",
+              "secondary": "#00eefc",
+              "surface-dim": "#0e0e0e",
+              "secondary-fixed": "#00eefc",
+              "on-surface": "#ffffff",
+              "inverse-on-surface": "#565555",
+              "on-primary": "#516700",
+              "error-dim": "#d53d18",
+              "on-tertiary": "#47001f",
+              "outline": "#767575",
+              "error-container": "#b92902",
+              "surface-container": "#1a1919",
+              "tertiary-fixed": "#ff8eae",
+              "surface-variant": "#262626",
+              "error": "#ff7351",
+              "on-primary-container": "#4a5e00",
+              "on-tertiary-container": "#000000",
+              "tertiary-dim": "#e30071",
+              "surface": "#0e0e0e",
+              "secondary-container": "#006970",
+              "surface-tint": "#f3ffca",
+              "surface-bright": "#2c2c2c",
+              "on-tertiary-fixed": "#380017",
+              "on-secondary-container": "#e3fdff",
+              "on-error-container": "#ffd2c8",
+              "primary-fixed-dim": "#beee00",
+              "on-primary-fixed-variant": "#526900",
+              "on-background": "#ffffff",
+              "tertiary": "#ff6b9b",
+              "on-primary-fixed": "#3a4a00",
+              "secondary-dim": "#00deec",
+              "primary-dim": "#beee00",
+              "secondary-fixed-dim": "#00deec",
+              "on-secondary-fixed": "#003f43",
+              "tertiary-fixed-dim": "#ff75a0",
+              "outline-variant": "#484847",
+              "on-surface-variant": "#adaaaa",
+              "primary-container": "#cafd00"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fluid-gradient-bg {
+            background: linear-gradient(135deg, #f3ffca 0%, #cafd00 100%);
+        }
+        .glass-card {
+            background: rgba(26, 25, 25, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow-secondary {
+            box-shadow: 0 8px 32px 0 rgba(0, 238, 252, 0.15);
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 20px rgba(243, 255, 202, 0.3);
+        }
+        ::-webkit-scrollbar { display: none; }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar from Components -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,238,252,0.1)]">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-white/10 active:scale-95 transition-transform">
+<img alt="Fitup Neon Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwkZsyl1RatNhh9tRCKiKUBvP_03Zh47XV3rxhVluWpy8jR09nWSBUouue9V8XycUzcyztstEyBJt_ilyq3uOB0pVgCeSeaWVOOHQi_M4YGWStbznLQcORUhIgIkEDpQ6M2vQ_ENgLYUGkHUozsTBsp3Ts30qJxgPhkoP4eJjTNJFv5YfKtJinwASHGnpK2GyUG4Xd6QEu38PsbwspVyAG_NTnm2bVTBmFnoWOXOi5XYqq4HfNWennegRUn1OPaBkgoZg8ZeXZUy_1"/>
+</div>
+<h1 class="text-[#f3ffca] font-['Space_Grotesk'] font-black tracking-tighter text-3xl italic">Fitup</h1>
+</div>
+<div class="flex items-center bg-surface-container-high px-4 py-2 rounded-full border border-white/5 active:scale-95 transition-all hover:text-[#00eefc]">
+<span class="material-symbols-outlined text-primary-fixed mr-2 text-lg">monetization_on</span>
+<span class="font-headline font-bold tracking-tight text-[#f3ffca]">2,450 FC</span>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto space-y-12">
+<!-- Wallet Hero Section -->
+<section class="relative group">
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-secondary/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="glass-card rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+<div class="space-y-4 text-center md:text-left z-10">
+<p class="font-label text-secondary uppercase tracking-[0.3em] text-xs font-bold">Rewards Wallet</p>
+<h2 class="font-headline text-5xl font-bold text-white tracking-tight">Fitcoins <span class="text-primary-fixed">Balance</span></h2>
+<p class="text-on-surface-variant max-w-xs leading-relaxed">You're in the top 5% of the community this week. Keep moving to unlock premium rewards.</p>
+<div class="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
+<button class="px-8 py-3 rounded-xl fluid-gradient-bg text-on-primary-container font-bold font-label hover:opacity-90 active:scale-95 transition-all neon-glow-primary">
+                        Redeem Now
+                    </button>
+<button class="px-8 py-3 rounded-xl bg-surface-container-highest text-white border border-white/10 font-bold font-label hover:bg-white/5 active:scale-95 transition-all">
+                        History
+                    </button>
+</div>
+</div>
+<div class="relative w-48 h-48 flex items-center justify-center z-10">
+<div class="absolute inset-0 bg-secondary/20 rounded-full animate-pulse blur-2xl"></div>
+<div class="w-40 h-40 rounded-full overflow-hidden flex items-center justify-center shadow-[0_0_50px_rgba(0,238,252,0.4)]">
+<img alt="Fitcoins Icon" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp9gebeKnQQwjVuguB8Pz_lupFQHZNDIxp5WaxJVYYoGzDA91spYpoMaNQ6gQBfIcTBzEdwHenOV_843a3OZdbQYG_bw7qM9LmmU9D2wWOEloLBZbi-L4iBK2pWjGT-VRHBM2ZLIDliGTm3lVuY-yXO1Q_UwtHKeIOoYS0DK3sXQ5nrS6zzxm227BCGV1g12KGbVYFqptx93RTCJgfjsOzbXSlFX0oR9oxzPquUY-peFwmlQ68XiHGvCOUap_Iq9Aj8LYIOpFEnmr8"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Events Section -->
+<section class="space-y-6">
+<div class="flex items-end justify-between">
+<div class="space-y-1">
+<h3 class="font-headline text-3xl font-bold tracking-tight">Live <span class="text-primary-fixed">Events</span></h3>
+<p class="text-on-surface-variant text-sm font-medium">Create or join real-time activities.</p>
+</div>
+<button class="text-primary font-bold text-sm hover:underline tracking-tight">Host Event</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="glass-card rounded-xl p-6 flex flex-col gap-4 group hover:border-primary/40 transition-all border-l-4 border-l-primary">
+<div class="flex justify-between items-start">
+<div class="p-3 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">directions_run</span>
+</div>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold rounded-full uppercase text-on-surface-variant">Public</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold">Sunset Sprint</h4>
+<p class="text-sm text-on-surface-variant mt-1">Starting in 45 mins • Central Park Area</p>
+</div>
+<button class="w-full py-3 rounded-lg bg-surface-container-highest font-bold text-sm hover:bg-primary hover:text-on-primary transition-all">Join Run</button>
+</div>
+<div class="glass-card rounded-xl p-6 flex flex-col gap-4 group hover:border-secondary/40 transition-all border-l-4 border-l-secondary">
+<div class="flex justify-between items-start">
+<div class="p-3 rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined">directions_walk</span>
+</div>
+<span class="px-3 py-1 bg-surface-container-highest text-[10px] font-bold rounded-full uppercase text-on-surface-variant">Private</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold">Morning Pacing</h4>
+<p class="text-sm text-on-surface-variant mt-1">Invited by: Team Alpha • 8:00 AM</p>
+</div>
+<button class="w-full py-3 rounded-lg bg-surface-container-highest font-bold text-sm hover:bg-secondary hover:text-on-secondary transition-all">Join Walk</button>
+</div>
+</div>
+</section>
+<!-- Challenges Section -->
+<section class="space-y-6">
+<div class="flex items-end justify-between">
+<div class="space-y-1">
+<h3 class="font-headline text-3xl font-bold tracking-tight">PvP <span class="text-tertiary">Challenges</span></h3>
+<p class="text-on-surface-variant text-sm font-medium">Challenge your network to beat your stats.</p>
+</div>
+<button class="text-tertiary font-bold text-sm hover:underline tracking-tight">Find Opponents</button>
+</div>
+<div class="glass-card rounded-xl p-6 bg-gradient-to-r from-surface-container to-tertiary/5">
+<div class="flex items-center gap-6">
+<div class="flex -space-x-4">
+<img alt="User avatar" class="w-12 h-12 rounded-full border-2 border-background object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwkZsyl1RatNhh9tRCKiKUBvP_03Zh47XV3rxhVluWpy8jR09nWSBUouue9V8XycUzcyztstEyBJt_ilyq3uOB0pVgCeSeaWVOOHQi_M4YGWStbznLQcORUhIgIkEDpQ6M2vQ_ENgLYUGkHUozsTBsp3Ts30qJxgPhkoP4eJjTNJFv5YfKtJinwASHGnpK2GyUG4Xd6QEu38PsbwspVyAG_NTnm2bVTBmFnoWOXOi5XYqq4HfNWennegRUn1OPaBkgoZg8ZeXZUy_1"/>
+<div class="w-12 h-12 rounded-full border-2 border-background bg-surface-container-highest flex items-center justify-center text-tertiary font-black italic">VS</div>
+<div class="w-12 h-12 rounded-full border-2 border-background bg-surface-container-highest flex items-center justify-center text-on-surface-variant italic">?</div>
+</div>
+<div class="flex-1">
+<h4 class="font-headline font-bold text-lg">Step Duel: 24h Sprint</h4>
+<p class="text-xs text-on-surface-variant">Prize: 200 FC • Entry: 20 FC</p>
+</div>
+<button class="px-6 py-2 rounded-full bg-tertiary text-white font-bold text-sm hover:scale-105 transition-transform shadow-[0_4px_15px_rgba(255,107,155,0.3)]">Challenge</button>
+</div>
+</div>
+</section>
+<!-- Community Feed Layout: Bento Grid Style -->
+<section class="space-y-8">
+<div class="flex items-end justify-between">
+<div class="space-y-1">
+<h3 class="font-headline text-3xl font-bold tracking-tight">Community <span class="text-secondary">Challenges</span></h3>
+<p class="text-on-surface-variant text-sm font-medium">Join 12,402 others in active biological optimization.</p>
+</div>
+<button class="text-primary font-bold text-sm hover:underline tracking-tight">View All Challenges</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Highlighted Challenge -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl glass-card h-[400px]">
+<img alt="Yoga challenge" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGBdrp0JjNJKow9SI5X9kiv8aWK7LJOkEe7zs6aIv1MIkPkMx0z3JDXoAu2-HAUARiHcEuh_USMGjWaB3YJhWKjV4F6Nk4SZF0ydPjsGvkD7sCBeJIOENboQk4EUNWrX4f8XgqX2W-2nY5ixpjwjWf-IcLBpJgp1fPzJsAqYXKmCOK3Rd_SSSyffpZ-e14e6jhG1jTHHDlumQFNo0LRSysLm2evPaapGn41NVEKqvmQvzzaupjcS9xb-10japFGA65g958lrEiJKd2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 space-y-4 w-full">
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-tertiary-container/30 border border-tertiary/30 rounded-full text-tertiary text-[10px] font-bold uppercase tracking-widest backdrop-blur-md">Trending</span>
+<span class="px-3 py-1 bg-secondary-container/30 border border-secondary/30 rounded-full text-secondary text-[10px] font-bold uppercase tracking-widest backdrop-blur-md">3 Days Left</span>
+</div>
+<h4 class="text-4xl font-headline font-bold text-white max-w-md leading-tight">Solar Plexus Resilience: Morning Flow</h4>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-3">
+<img alt="avatar" class="w-8 h-8 rounded-full border-2 border-background object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpm7kq1cRh08KTRSxWsg2jZsJSVNLj1Osk61goqdzVOhxIq0x4LTJxbTgASiviZMF9EkphbOPdCROuI3y2-_77SY_bNyhPP5VfJCIwaddmt4KoRQKC3Ael_PX1KM7YGbcKDxP_ZQqFCfuiiV40PvCHEseQjN4hpWN3P9hhu__HRLxOheOtI2BwSH0jW5rlnhM4Wz2WQOLRqJ_NKcmAw8Z4fqxl37qErdm5C1l7XPkKMCD0cZfQW0UIqLe8ElK7Cu3Em2xN3dJalEDd"/>
+<img alt="avatar" class="w-8 h-8 rounded-full border-2 border-background object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAghPoqqjMYNOIeor1j7mnZq6w8DZ1WyM0vgJ_tGEDZ7DKkgTAOfIeL6KoM3w4eucI31c2h0AMsJOu5ul_DTYyZIzDsQYgJVWff8BaBptVtaX-f3wgHVLJKNbkWlTbmJmbPY4D8-cDEePwGcnmfK3GNguQrM1ODJkSA1f__FOea3nlB75jdx8j9B5b3BNwy_ouQkgLVWZ-sX7s4gz6ldl65xhAin2Zg5yAvNYYyc1CZt4EkIkBM7qcRmXtpSmskMML1vFBLiaW4HpvT"/>
+<img alt="avatar" class="w-8 h-8 rounded-full border-2 border-background object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAnO286dcO6yP1oT5xVqWzFZ-37M-pzlUI06A0TUqQ1TrubKgu2B6_oRIW2LNhtX33xSWkYMrCh29sb9KTOsOMfjmoldkb8lypqZVlEZYevQ2BcXCnQo-wXlI_4fHz4uek63mVwxOFOi3r7t23pQLEQNEq5yginfIr1O0o_RnXmoVgkaBw8Cl__oIdV9JG_LMoXFlzi74wB-enyuz1UCjqiqe3EB3-P-MHF5jAf9YSYdmYHTCLrW4gNtalGTGOAdr6iAlJaPLt-lnA"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-background flex items-center justify-center text-[10px] font-bold">+2k</div>
+</div>
+<button class="px-6 py-2 rounded-full bg-white text-background font-bold font-label hover:bg-primary-fixed transition-colors">Join Task</button>
+</div>
+</div>
+</div>
+<!-- Small Challenge 1 -->
+<div class="md:col-span-4 glass-card rounded-xl p-6 flex flex-col justify-between group hover:border-secondary/30 transition-all">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">directions_run</span>
+</div>
+<h5 class="text-xl font-headline font-bold leading-tight">Neon Night Runners: 5K Pulse</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">Join the local chapter for a high-intensity interval run tonight.</p>
+</div>
+<div class="pt-6 flex items-center justify-between border-t border-white/5">
+<span class="text-primary-fixed font-bold">+150 FC</span>
+<button class="p-2 rounded-full hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Small Challenge 2 -->
+<div class="md:col-span-4 glass-card rounded-xl p-6 flex flex-col justify-between group hover:border-tertiary/30 transition-all">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<h5 class="text-xl font-headline font-bold leading-tight">Bio-Fuel: 7 Day Cleanse</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">Eliminate processed toxins. Track your meal biomarkers with AI.</p>
+</div>
+<div class="pt-6 flex items-center justify-between border-t border-white/5">
+<span class="text-primary-fixed font-bold">+500 FC</span>
+<button class="p-2 rounded-full hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Reward Store Preview -->
+<div class="md:col-span-8 glass-card rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center bg-gradient-to-br from-surface-container-high to-background">
+<div class="space-y-4 md:w-1/2">
+<h4 class="text-2xl font-headline font-bold">Exclusive <span class="text-primary">Perks</span></h4>
+<p class="text-on-surface-variant text-sm">Convert your biological output into real-world gear and health subscriptions.</p>
+<div class="flex items-center gap-2 pt-2">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">New Items Added</span>
+</div>
+</div>
+<div class="flex gap-4 md:w-1/2 overflow-x-auto pb-2">
+<div class="min-w-[140px] aspect-square bg-surface-container-highest rounded-xl p-4 flex flex-col items-center justify-center text-center gap-2 border border-white/5">
+<img alt="Sneakers" class="w-12 h-12 object-contain opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkSncI-jEhSzdjNT_RZkGTfXxB46rTrTu8sPkcvDV0tptZpRHquQQdUVH-AXyytTK5-bWiLJkTxYgTQp0foBAdlejOhuQ8SrvyBWfWJEsLqwsTcnSWgj3WM9_lwuz3hhV7yRGAt5RjQ11yX8ldAX_OTV3PM0hbt89NWqelq5HG_tqz-INVTIUUiwv0O5tXJ8v-YkcQXJXbgPVqwLQ1MBIKXgr_tw6h36xZvF2WnpmZ-RyxE_TOuP6c8zwPs7KAsLKY38vskgU0WXGJ"/>
+<span class="text-[10px] font-bold text-on-surface-variant">Fitup Kit</span>
+<span class="text-xs font-bold text-primary-fixed">1,200 FC</span>
+</div>
+<div class="min-w-[140px] aspect-square bg-surface-container-highest rounded-xl p-4 flex flex-col items-center justify-center text-center gap-2 border border-white/5">
+<img alt="Watch" class="w-12 h-12 object-contain opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRoogL3EzKxwjd6T_u_G7qFcS-t1YrTkJvavvlzsuXZZ9fFgpnUdYBnVslP3pr4fkiy9IGTrSZlyqR7Z-vSGY5API3iiMGRQs_8xu_24pQZ1ROBWIiPxcaP0F4c8pg4_03QDnDn1b_yNWF2XYn6uPCj9KJaRTfgohiQAuz2OeAfURCUoaVRKXLOrqJfzLoC1B13cPTOAmYD3rJdrSW5Gz-7JtTMU_uOUgjMoBx-3Em0bRKLFcQyvMoYCioltNAzzAtv15jO784P-UR"/>
+<span class="text-[10px] font-bold text-on-surface-variant">Tracker</span>
+<span class="text-xs font-bold text-primary-fixed">5,000 FC</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Insights Component: The Insight Orb -->
+<section class="glass-card rounded-xl p-8 flex items-center justify-between overflow-hidden relative">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-48 h-48 pointer-events-none">
+<svg class="w-full h-full opacity-40" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="orbGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#f3ffca"></stop>
+<stop offset="50%" stop-color="#00eefc"></stop>
+<stop offset="100%" stop-color="#ff6b9b"></stop>
+</lineargradient>
+</defs>
+<path d="M44.7,-76.4C58.1,-69.2,69.5,-57.4,77.1,-43.7C84.7,-30.1,88.4,-15,86.9,-0.8C85.5,13.3,78.8,26.6,71,39.8C63.2,53,54.3,66.1,42.1,73.5C29.9,80.9,15,82.6,0.3,82.1C-14.4,81.6,-28.9,78.9,-42.2,72.4C-55.5,65.9,-67.7,55.5,-75.4,42.7C-83,29.9,-86.2,14.9,-85.2,0.6C-84.1,-13.7,-78.9,-27.4,-70.5,-39.2C-62.1,-51,-50.5,-61,-37.6,-68.6C-24.6,-76.2,-12.3,-81.4,1.4,-83.8C15.1,-86.3,31.3,-83.7,44.7,-76.4Z" fill="url(#orbGradient)" transform="translate(100 100)"></path>
+</svg>
+</div>
+<div class="space-y-2 z-10">
+<h4 class="font-headline text-xl font-bold">AI Social Insight</h4>
+<p class="text-on-surface-variant text-sm max-w-md italic">"Users who participate in group challenges are 40% more likely to hit their REM sleep targets. You have 3 friends active right now."</p>
+</div>
+<div class="z-10">
+<button class="px-5 py-2 rounded-full border border-secondary text-secondary text-xs font-bold uppercase tracking-widest hover:bg-secondary/10 transition-all">Connect Friends</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar from Components -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-4 pb-8 px-4 bg-[#0e0e0e]/90 backdrop-blur-2xl rounded-t-[3rem] z-50 border-t border-white/10 shadow-[0_-8px_32px_0_rgba(0,0,0,0.8)]">
+<div class="flex flex-col items-center justify-center bg-[#f3ffca] text-[#0e0e0e] rounded-full px-6 py-2 shadow-[0_0_15px_rgba(243,255,202,0.5)] active:scale-90 duration-200">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Pulse</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#adaaaa] px-6 py-2 hover:text-[#f3ffca] transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined text-2xl">psychology</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Insights</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#adaaaa] px-6 py-2 hover:text-[#f3ffca] transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined text-2xl">fitness_center</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Training</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#adaaaa] px-6 py-2 hover:text-[#f3ffca] transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ff75a0",
+              "on-background": "#ffffff",
+              "surface-container-lowest": "#000000",
+              "surface-container-low": "#131313",
+              "on-primary-container": "#4a5e00",
+              "inverse-surface": "#fcf9f8",
+              "on-primary": "#516700",
+              "on-error": "#450900",
+              "surface-bright": "#2c2c2c",
+              "on-primary-fixed": "#3a4a00",
+              "on-surface": "#ffffff",
+              "on-secondary-fixed-variant": "#005e64",
+              "secondary": "#00eefc",
+              "tertiary-fixed": "#ff8eae",
+              "secondary-fixed-dim": "#00deec",
+              "outline": "#767575",
+              "surface-tint": "#f3ffca",
+              "surface-container-high": "#201f1f",
+              "on-tertiary-fixed-variant": "#760037",
+              "surface": "#0e0e0e",
+              "tertiary-dim": "#e30071",
+              "on-secondary-fixed": "#003f43",
+              "tertiary-container": "#ff067f",
+              "inverse-primary": "#516700",
+              "surface-variant": "#262626",
+              "on-tertiary-container": "#000000",
+              "inverse-on-surface": "#565555",
+              "primary": "#f3ffca",
+              "surface-container-highest": "#262626",
+              "error-dim": "#d53d18",
+              "on-error-container": "#ffd2c8",
+              "tertiary": "#ff6b9b",
+              "surface-dim": "#0e0e0e",
+              "on-secondary": "#005359",
+              "on-secondary-container": "#e3fdff",
+              "primary-fixed-dim": "#beee00",
+              "primary-dim": "#beee00",
+              "primary-fixed": "#cafd00",
+              "secondary-fixed": "#00eefc",
+              "primary-container": "#cafd00",
+              "secondary-dim": "#00deec",
+              "on-tertiary-fixed": "#380017",
+              "secondary-container": "#006970",
+              "background": "#0e0e0e",
+              "error": "#ff7351",
+              "surface-container": "#1a1919",
+              "outline-variant": "#484847",
+              "error-container": "#b92902",
+              "on-primary-fixed-variant": "#526900",
+              "on-tertiary": "#47001f",
+              "on-surface-variant": "#adaaaa"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(26, 25, 25, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+        .fluid-gradient-text {
+            background: linear-gradient(135deg, #f3ffca 0%, #cafd00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 20px rgba(243, 255, 202, 0.15);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen selection:bg-primary selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e0e]/60 backdrop-blur-xl flex justify-between items-center px-6 h-20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-primary/20">
+<img class="w-full h-full object-cover" data-alt="User athletic profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzbP2kFpn9VXcOw-_FaSQrFCqLrLM9_b9sqFjnFKdDNfg1Yj-hLx_ShNhv5V28XvmIyz3iVt3D22RiBnVvkRZKVNKIdFzK93gayNox9QAe_JjBwDZHrwiOy4KgclfW4lKrY78Bi5rMzNy7jBuel2X-CoaIfEFY1-rb41yEJ2GmDqZNOFwlCw7t1hMisO7uVIE1SGTyEBUZqEGHpel680SjTba3JFGw6YDapNjZgWAacz0DA-CTOwvG7Jil3bdtCazZW7k7yeHwzZJv"/>
+</div>
+<span class="font-headline font-black tracking-tighter text-2xl italic text-primary">FITUP</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary p-2 active:scale-95 transition-transform duration-200">notifications</button>
+</div>
+<div class="absolute bottom-0 left-0 bg-gradient-to-b from-primary/10 to-transparent h-[1px] w-full"></div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-lg mx-auto">
+<!-- Daily Summary Hero Card -->
+<section class="mb-10">
+<div class="glass-card rounded-xl p-8 relative overflow-hidden">
+<!-- Fluid Background Shape -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+<div class="flex justify-between items-start mb-8">
+<div>
+<p class="text-on-surface-variant font-label uppercase tracking-widest text-xs mb-1">Daily Pulse</p>
+<h1 class="text-4xl font-headline font-bold tracking-tight">Active State</h1>
+</div>
+<div class="bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
+<span class="text-primary text-xs font-bold tracking-tighter">LEVEL 12</span>
+</div>
+</div>
+<!-- Stats Grid with Neon Indicators -->
+<div class="grid grid-cols-3 gap-4">
+<div class="flex flex-col items-center">
+<div class="relative w-20 h-20 flex items-center justify-center mb-3">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-container-highest" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-primary" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213" stroke-dashoffset="60" stroke-width="6"></circle>
+</svg>
+<span class="absolute material-symbols-outlined text-primary text-xl">footprint</span>
+</div>
+<p class="text-2xl font-headline font-bold">8,432</p>
+<p class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest">Steps</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="relative w-20 h-20 flex items-center justify-center mb-3">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-container-highest" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-secondary" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213" stroke-dashoffset="110" stroke-width="6"></circle>
+</svg>
+<span class="absolute material-symbols-outlined text-secondary text-xl">local_fire_department</span>
+</div>
+<p class="text-2xl font-headline font-bold">482</p>
+<p class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest">Kcal</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="relative w-20 h-20 flex items-center justify-center mb-3">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-container-highest" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-tertiary" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213" stroke-dashoffset="140" stroke-width="6"></circle>
+</svg>
+<span class="absolute material-symbols-outlined text-tertiary text-xl">distance</span>
+</div>
+<p class="text-2xl font-headline font-bold">5.2</p>
+<p class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest">Km</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Track Activity Section (Bento Grid) -->
+<section class="mb-10">
+<div class="flex justify-between items-end mb-6">
+<h2 class="text-2xl font-headline font-bold tracking-tight">Track Activity</h2>
+<button class="text-primary text-xs font-bold uppercase tracking-widest">View All</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Large Run Tile -->
+<div class="glass-card rounded-lg p-6 flex flex-col justify-between h-48 active:scale-95 transition-transform cursor-pointer relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">directions_run</span>
+</div>
+<div>
+<p class="text-xl font-headline font-bold mb-1">Run</p>
+<p class="text-on-surface-variant text-xs font-medium">GPS Tracking Active</p>
+</div>
+</div>
+<!-- Cycling Tile -->
+<div class="glass-card rounded-lg p-6 flex flex-col justify-between h-48 active:scale-95 transition-transform cursor-pointer relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full blur-3xl group-hover:bg-secondary/10 transition-colors"></div>
+<div class="bg-secondary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl">directions_bike</span>
+</div>
+<div>
+<p class="text-xl font-headline font-bold mb-1">Cycle</p>
+<p class="text-on-surface-variant text-xs font-medium">Outdoor Circuit</p>
+</div>
+</div>
+<!-- Walk Tile -->
+<div class="glass-card rounded-lg p-6 flex flex-col justify-between h-40 active:scale-95 transition-transform cursor-pointer group">
+<div class="bg-tertiary/10 w-10 h-10 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-tertiary text-2xl">directions_walk</span>
+</div>
+<div>
+<p class="text-lg font-headline font-bold">Walk</p>
+</div>
+</div>
+<!-- Swim Tile -->
+<div class="glass-card rounded-lg p-6 flex flex-col justify-between h-40 active:scale-95 transition-transform cursor-pointer group">
+<div class="bg-on-secondary-fixed/30 w-10 h-10 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary text-2xl">pool</span>
+</div>
+<div>
+<p class="text-lg font-headline font-bold">Swim</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Activity -->
+<section class="mb-10">
+<h2 class="text-2xl font-headline font-bold tracking-tight mb-6">Recent Records</h2>
+<div class="space-y-4">
+<!-- Activity Item 1 -->
+<div class="glass-card rounded-lg p-5 flex items-center gap-4 group">
+<div class="w-14 h-14 rounded-xl bg-surface-container-highest flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-primary text-2xl z-10">directions_run</span>
+<div class="absolute inset-0 bg-primary/5"></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-lg">Morning Sprint</h3>
+<span class="text-primary font-headline font-bold text-lg">+12 FIT</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant text-xs font-medium uppercase tracking-widest">
+<span>Today</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>42:15 Min</span>
+</div>
+</div>
+</div>
+<!-- Activity Item 2 -->
+<div class="glass-card rounded-lg p-5 flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container-highest flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-secondary text-2xl z-10">fitness_center</span>
+<div class="absolute inset-0 bg-secondary/5"></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-lg">HIIT Training</h3>
+<span class="text-primary font-headline font-bold text-lg">+25 FIT</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant text-xs font-medium uppercase tracking-widest">
+<span>Yesterday</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>55:00 Min</span>
+</div>
+</div>
+</div>
+<!-- Activity Item 3 -->
+<div class="glass-card rounded-lg p-5 flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container-highest flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-tertiary text-2xl z-10">directions_bike</span>
+<div class="absolute inset-0 bg-tertiary/5"></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-lg">Coastal Cycle</h3>
+<span class="text-primary font-headline font-bold text-lg">+18 FIT</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant text-xs font-medium uppercase tracking-widest">
+<span>24 Oct</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>1:12:05 Hr</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Insight Orb (Floating AI element) -->
+<div class="fixed bottom-32 right-6 z-40">
+<div class="w-16 h-16 rounded-full glass-card flex items-center justify-center relative group active:scale-90 transition-transform cursor-pointer border-primary/20">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary via-secondary to-tertiary opacity-20 blur-xl animate-pulse"></div>
+<span class="material-symbols-outlined text-primary text-3xl font-variation-fill" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-[3rem] border-t border-white/10 z-50 bg-[#1a1919]/60 backdrop-blur-2xl flex justify-around items-center px-4 pb-8 pt-4 shadow-[0_-4px_24px_rgba(204,255,0,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#adaaaa] p-3 hover:text-primary transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1">home_max</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary text-[#0e0e0e] rounded-full p-3 shadow-[0_0_20px_rgba(243,255,202,0.4)] active:scale-90 transition-transform duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1">insights</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-bold">Activity</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] p-3 hover:text-primary transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1">fitness_center</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-bold">Workouts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] p-3 hover:text-primary transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1">groups</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-bold">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] p-3 hover:text-primary transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-bold">Profile</span>
+</a>
+</nav>
+</body></html>

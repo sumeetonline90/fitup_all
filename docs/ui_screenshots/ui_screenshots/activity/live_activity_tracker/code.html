@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FITUP | Live Activity Tracker</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed-dim": "#ff75a0",
+                        "on-background": "#ffffff",
+                        "surface-container-lowest": "#000000",
+                        "surface-container-low": "#131313",
+                        "on-primary-container": "#4a5e00",
+                        "inverse-surface": "#fcf9f8",
+                        "on-primary": "#516700",
+                        "on-error": "#450900",
+                        "surface-bright": "#2c2c2c",
+                        "on-primary-fixed": "#3a4a00",
+                        "on-surface": "#ffffff",
+                        "on-secondary-fixed-variant": "#005e64",
+                        "secondary": "#00eefc",
+                        "tertiary-fixed": "#ff8eae",
+                        "secondary-fixed-dim": "#00deec",
+                        "outline": "#767575",
+                        "surface-tint": "#f3ffca",
+                        "surface-container-high": "#201f1f",
+                        "on-tertiary-fixed-variant": "#760037",
+                        "surface": "#0e0e0e",
+                        "tertiary-dim": "#e30071",
+                        "on-secondary-fixed": "#003f43",
+                        "tertiary-container": "#ff067f",
+                        "inverse-primary": "#516700",
+                        "surface-container-highest": "#262626",
+                        "error-dim": "#d53d18",
+                        "on-error-container": "#ffd2c8",
+                        "tertiary": "#ff6b9b",
+                        "surface-dim": "#0e0e0e",
+                        "on-secondary": "#005359",
+                        "on-secondary-container": "#e3fdff",
+                        "primary-fixed-dim": "#beee00",
+                        "primary-dim": "#beee00",
+                        "primary-fixed": "#cafd00",
+                        "secondary-fixed": "#00eefc",
+                        "primary-container": "#cafd00",
+                        "secondary-dim": "#00deec",
+                        "on-tertiary-fixed": "#380017",
+                        "secondary-container": "#006970",
+                        "background": "#0e0e0e",
+                        "error": "#ff7351",
+                        "surface-container": "#1a1919",
+                        "outline-variant": "#484847",
+                        "error-container": "#b92902",
+                        "on-primary-fixed-variant": "#526900",
+                        "on-tertiary": "#47001f",
+                        "on-surface-variant": "#adaaaa"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(26, 25, 25, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+        .neon-glow-primary {
+            text-shadow: 0 0 15px rgba(243, 255, 202, 0.5);
+        }
+        .neon-glow-secondary {
+            box-shadow: 0 0 20px rgba(0, 238, 252, 0.3);
+        }
+        .fluid-gradient {
+            background: linear-gradient(135deg, #f3ffca 0%, #cafd00 100%);
+        }
+        .map-gradient-overlay {
+            background: linear-gradient(to bottom, transparent 0%, #0e0e0e 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary-container min-h-screen overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e0e]/60 backdrop-blur-xl flex justify-between items-center px-6 h-20">
+<div class="flex items-center gap-3">
+<img class="h-8 w-auto" data-alt="FITUP brand logo with lightning bolt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACTbVS-Gw4-mgbVthdEiMt1s38uEHfLbM2DTCiz8FDQGM9jIXlA6rZGiHTBRaIPm4aKzT2ZHmvyc9IxtinLsxu2tZ886f6oOdpVrMm3zhSsYyp_tuwTy9pAmUYpULGF2-z15rAOwFSehcYjom8gzc2Hh711NTDr58F5kxBhDbPjRYUnYgDZ8xvRwsgmw08zhqaZHG7KY7ne3p-8jZBv6xPSIFuy-9sYGrGwK02SElw6cImWRRKKIiE5yqwzNbGZiutprXF9_h20twD"/>
+<span class="font-['Space_Grotesk'] font-bold tracking-tighter text-2xl italic text-[#f3ffca]">FITUP</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#adaaaa] hover:text-[#ffffff] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full border-2 border-primary/20 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile marathon runner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Rh-gDvuOSXRGnErSOL30JZGPwnkQgcbmC8FSFHP0ETOvnZbY4DWXWkomxpOVfxA_F9cvrIiiNp68cibpbgctPV5qSNH61oFlo_Q2YAic6ErCSRd0wDw4V0nHd4Q5USjF556y32EVuYh_P2IsVpkPz-u0P_oW72VwsNYTvNDh41-kCOYPL1Iex2a7ZG6PVciPSdBu36IzIGiGxO2BBQvENTOup6KI_nWfkLLkDwDYeFL3yb2IV6VkalUXM-FoErfK6oyZHQOyownB"/>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 bg-gradient-to-b from-[#f3ffca]/10 to-transparent h-[1px] w-full"></div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto">
+<!-- Live Map Segment -->
+<section class="relative w-full h-[309px] rounded-xl overflow-hidden mb-8 border border-white/5">
+<img class="w-full h-full object-cover opacity-60" data-alt="Dark stylized topo map of city streets" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKJrkyDwldN18QBayHS7bBfsH-VbVMmtoUwxidMvRlp4xiiExpU7r3yZpOzXlaAs9AiiVcq6_-xtvI2w2fk0V5ZVfzDCAqN5KZCYwj__OlIvwmFYeR9Yw29rX5tY45EU7WqNbC1effh4XTAC1WCSfknHNmxIVlZk83hKEYt9eO4osZT-faRzkOTmYB1-lSb2dTppNl-dQk2qZCuIMtDyMGYHOicihXNCdFW4woSOAbfyM7qnp1LL5jQKReLrYmSzQrP5yWXkLQAHhW"/>
+<div class="absolute inset-0 map-gradient-overlay"></div>
+<!-- SVG Path Overlay (The Glowing Neon Line) -->
+<svg class="absolute inset-0 w-full h-full" viewbox="0 0 400 300">
+<path class="drop-shadow-[0_0_8px_rgba(0,238,252,0.8)]" d="M50 250 Q 100 150 200 180 T 350 50" fill="transparent" stroke="#00eefc" stroke-linecap="round" stroke-width="4"></path>
+<circle class="animate-pulse shadow-[0_0_15px_#00eefc]" cx="350" cy="50" fill="#00eefc" r="6"></circle>
+</svg>
+<!-- Insight Orb (Thinking AI) -->
+<div class="absolute top-4 left-4 w-12 h-12 glass-card rounded-full flex items-center justify-center">
+<div class="w-6 h-6 rounded-full bg-gradient-to-br from-primary via-secondary to-tertiary animate-spin blur-md opacity-70"></div>
+<span class="material-symbols-outlined absolute text-xs text-secondary" data-icon="auto_awesome">auto_awesome</span>
+</div>
+</section>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+<!-- Primary Large Metric (Time) -->
+<div class="md:col-span-2 glass-card rounded-xl p-8 flex flex-col items-center justify-center text-center">
+<span class="font-label text-on-surface-variant text-xs uppercase tracking-[0.2em] mb-2">Duration</span>
+<h1 class="font-headline font-bold text-7xl md:text-9xl text-primary neon-glow-primary tracking-tighter italic">00:42:15</h1>
+</div>
+<!-- Secondary Metrics Row -->
+<div class="glass-card rounded-xl p-6 flex items-center justify-between">
+<div>
+<span class="font-label text-on-surface-variant text-xs uppercase tracking-widest block mb-1">Distance</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline font-bold text-4xl text-secondary">8.42</span>
+<span class="font-label text-secondary-dim text-sm font-bold uppercase">KM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary/40 text-4xl" data-icon="route">route</span>
+</div>
+<div class="glass-card rounded-xl p-6 flex items-center justify-between">
+<div>
+<span class="font-label text-on-surface-variant text-xs uppercase tracking-widest block mb-1">Avg Pace</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline font-bold text-4xl text-secondary">5:12</span>
+<span class="font-label text-secondary-dim text-sm font-bold uppercase">MIN/KM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary/40 text-4xl" data-icon="speed">speed</span>
+</div>
+</div>
+<!-- Bio-Data & Insights (Asymmetric Layout) -->
+<div class="grid grid-cols-3 gap-6 mb-16">
+<!-- Heart Rate Glass Card -->
+<div class="col-span-2 glass-col glass-card rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-tertiary/10 rounded-full blur-3xl group-hover:bg-tertiary/20 transition-all"></div>
+<div class="flex items-center justify-between relative z-10">
+<div>
+<span class="font-label text-on-surface-variant text-xs uppercase tracking-widest block mb-1">Live Pulse</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline font-bold text-5xl text-tertiary">164</span>
+<span class="font-label text-tertiary-dim text-xs font-bold">BPM</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="material-symbols-outlined text-tertiary animate-bounce mb-2" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<div class="h-8 w-24 flex items-end gap-1">
+<div class="w-1 bg-tertiary/30 h-1/2 rounded-full"></div>
+<div class="w-1 bg-tertiary/50 h-3/4 rounded-full"></div>
+<div class="w-1 bg-tertiary/80 h-full rounded-full"></div>
+<div class="w-1 bg-tertiary/50 h-2/3 rounded-full"></div>
+<div class="w-1 bg-tertiary/80 h-full rounded-full"></div>
+<div class="w-1 bg-tertiary h-5/6 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Calories/Small Metric -->
+<div class="col-span-1 glass-card rounded-xl p-6 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-on-surface-variant/40 mb-2" data-icon="local_fire_department">local_fire_department</span>
+<span class="font-headline font-bold text-2xl">642</span>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-tighter">KCAL</span>
+</div>
+</div>
+<!-- Active Controls -->
+<div class="flex items-center justify-center gap-6">
+<!-- Pause Button -->
+<button class="w-20 h-20 rounded-full glass-card flex items-center justify-center text-secondary border-secondary/20 hover:bg-secondary/10 transition-all active:scale-90 group">
+<span class="material-symbols-outlined text-4xl group-hover:scale-110 transition-transform" data-icon="pause">pause</span>
+</button>
+<!-- Stop/Finish Button (Fluid Shape) -->
+<button class="px-12 py-6 rounded-full fluid-gradient text-on-primary-container font-headline font-black text-xl tracking-widest uppercase shadow-[0_0_30px_rgba(243,255,202,0.4)] hover:shadow-[0_0_50px_rgba(243,255,202,0.6)] transition-all active:scale-95 flex items-center gap-3">
+<span class="material-symbols-outlined font-normal" data-icon="stop_circle">stop_circle</span>
+                Finish
+            </button>
+<!-- Photo Button -->
+<button class="w-20 h-20 rounded-full glass-card flex items-center justify-center text-on-surface-variant hover:text-white transition-all active:scale-90">
+<span class="material-symbols-outlined text-3xl" data-icon="photo_camera">photo_camera</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 w-full rounded-t-[3rem] border-t border-white/10 z-50 bg-[#1a1919]/60 backdrop-blur-2xl shadow-[0_-4px_24px_rgba(204,255,0,0.06)]">
+<div class="flex justify-around items-center w-full px-4 pb-8 pt-4">
+<a class="flex flex-col items-center justify-center text-[#adaaaa] p-3 hover:text-[#f3ffca] transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home_max">home_max</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#f3ffca] text-[#0e0e0e] rounded-full p-3 shadow-[0_0_20px_rgba(243,255,202,0.4)] active:scale-90 transition-transform duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="insights" style="font-variation-settings: 'FILL' 1;">insights</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-bold">Activity</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] p-3 hover:text-[#f3ffca] transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="fitness_center">fitness_center</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-bold">Workouts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] p-3 hover:text-[#f3ffca] transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="groups">groups</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-bold">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] p-3 hover:text-[#f3ffca] transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-bold">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

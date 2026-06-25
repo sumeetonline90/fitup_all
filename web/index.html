@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="theme-color" content="#0E0E0E">
+  <meta name="color-scheme" content="dark">
+  <meta name="google-signin-client_id" content="1026922734926-2394hhghnrvfh1qosk6vg85moutc2mal.apps.googleusercontent.com">
+  <meta name="description" content="Fitup — Holistic Health AI">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fitup — Holistic Health AI">
+  <meta property="og:description" content="Track activity, diet, workouts, and mental wellbeing with AI insights.">
+  <meta property="og:image" content="favicon.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="fitup">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Fitup — Holistic Health AI</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googleapis.com">
+  <link rel="dns-prefetch" href="https://firestore.googleapis.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Manrope:wght@400;500;600&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Manrope:wght@400;500;600&display=swap">
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; min-height: 100vh; background: #0E0E0E; color: #E6E9F2; font-family: 'Manrope', system-ui, sans-serif; overscroll-behavior: none; }
+    flutter-view, flt-glass-pane { background: #0E0E0E; }
+    #fitup-splash {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 24px;
+      background: radial-gradient(circle at 50% 35%, #131a36 0%, #0A0E21 70%);
+      z-index: 9999; transition: opacity 350ms ease;
+    }
+    #fitup-splash.fade { opacity: 0; pointer-events: none; }
+    #fitup-splash .logo {
+      font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 42px;
+      letter-spacing: 1px;
+      background: linear-gradient(135deg, #00E5FF 0%, #3D5AFE 60%, #FF006E 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    #fitup-splash .ring {
+      width: 48px; height: 48px; border-radius: 50%;
+      border: 3px solid rgba(0, 229, 255, 0.18);
+      border-top-color: #00E5FF;
+      animation: fitup-spin 0.9s linear infinite;
+    }
+    #fitup-splash .tagline { font-size: 13px; color: #8a90a8; letter-spacing: 0.5px; }
+    @keyframes fitup-spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <div id="fitup-splash">
+    <div class="logo">Fitup</div>
+    <div class="ring"></div>
+    <div class="tagline">Holistic Health AI</div>
+  </div>
+  <script>
+    // One-time killswitch: unregister any old Flutter service worker and
+    // purge its caches so users on a previously-deployed SW pick up new builds.
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function (regs) {
+        for (var i = 0; i < regs.length; i++) {
+          regs[i].unregister();
+        }
+      });
+      if (window.caches && caches.keys) {
+        caches.keys().then(function (keys) {
+          for (var i = 0; i < keys.length; i++) {
+            caches.delete(keys[i]);
+          }
+        });
+      }
+    }
+  </script>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var s = document.getElementById('fitup-splash');
+      if (!s) return;
+      s.classList.add('fade');
+      setTimeout(function () { s.remove(); }, 400);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

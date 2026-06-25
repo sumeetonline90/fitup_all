@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fitup - Diet &amp; Hydration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#cafd00",
+              "surface-container-low": "#131313",
+              "on-tertiary-fixed-variant": "#760037",
+              "inverse-surface": "#fcf9f8",
+              "primary": "#f3ffca",
+              "inverse-primary": "#516700",
+              "surface-container-highest": "#262626",
+              "tertiary-container": "#ff067f",
+              "surface-container-high": "#201f1f",
+              "surface-container-lowest": "#000000",
+              "on-secondary": "#005359",
+              "on-error": "#450900",
+              "on-secondary-fixed-variant": "#005e64",
+              "background": "#0e0e0e",
+              "secondary": "#00eefc",
+              "surface-dim": "#0e0e0e",
+              "secondary-fixed": "#00eefc",
+              "on-surface": "#ffffff",
+              "inverse-on-surface": "#565555",
+              "on-primary": "#516700",
+              "error-dim": "#d53d18",
+              "on-tertiary": "#47001f",
+              "outline": "#767575",
+              "error-container": "#b92902",
+              "surface-container": "#1a1919",
+              "tertiary-fixed": "#ff8eae",
+              "surface-variant": "#262626",
+              "error": "#ff7351",
+              "on-primary-container": "#4a5e00",
+              "on-tertiary-container": "#000000",
+              "tertiary-dim": "#e30071",
+              "surface": "#0e0e0e",
+              "secondary-container": "#006970",
+              "surface-tint": "#f3ffca",
+              "surface-bright": "#2c2c2c",
+              "on-tertiary-fixed": "#380017",
+              "on-secondary-container": "#e3fdff",
+              "on-error-container": "#ffd2c8",
+              "primary-fixed-dim": "#beee00",
+              "on-primary-fixed-variant": "#526900",
+              "on-background": "#ffffff",
+              "tertiary": "#ff6b9b",
+              "on-primary-fixed": "#3a4a00",
+              "secondary-dim": "#00deec",
+              "primary-dim": "#beee00",
+              "secondary-fixed-dim": "#00deec",
+              "on-secondary-fixed": "#003f43",
+              "tertiary-fixed-dim": "#ff75a0",
+              "outline-variant": "#484847",
+              "on-surface-variant": "#adaaaa",
+              "primary-container": "#cafd00"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fluid-wave {
+            background: linear-gradient(180deg, rgba(0,238,252,0.2) 0%, rgba(0,238,252,0.8) 100%);
+            mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" fill="black"/></svg>');
+            mask-size: cover;
+        }
+        @keyframes morph {
+            0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+            100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        }
+        .animate-morph {
+            animation: morph 8s ease-in-out infinite;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar Shared Component Integration -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,238,252,0.1)]">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-white/10">
+<img alt="Fitup Neon Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmS1nRXEI9p6MrDFjc3pzNmSVQyCGXuIp3O1EaFN-Ntgxhh30HE0JFWw07H3Z2xXJNHSd4ew2F1yWnSQwT2Z1frBIuJqMKo3UeIYFueSgUzRdDDvNrgACTTrGJeNoyjJn61pDSLuw1Y77JmVXbrTwJs9QbED4_yxeZ7sykZWzNHNJHOemB2nZq_OyanGb_waI-Ul1c5ZAM0mFTub7OkaLnTXNnb5GW6g1jldCXh3QfaCgLWwxhXV9vvTCGfEEhSPi1DPSWdLmsFMP8"/>
+</div>
+<h1 class="text-[#f3ffca] font-['Space_Grotesk'] font-black tracking-tighter text-3xl italic">Fitup</h1>
+</div>
+<div class="flex items-center gap-2 bg-[#1a1919]/60 px-4 py-2 rounded-full border border-white/5 active:scale-95 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="text-[#f3ffca] font-headline font-bold text-sm tracking-tight">2,450 FC</span>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto space-y-8">
+<!-- Date Navigation Section -->
+<div class="flex items-center justify-center gap-8 py-2">
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors active:scale-90">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="text-center">
+<h3 class="font-headline font-bold text-lg text-white">Today</h3>
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-[0.2em]">November 24, 2024</p>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors active:scale-90">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Hero Section: Fluidic Water Tracker -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-7 space-y-4">
+<p class="font-headline text-on-surface-variant uppercase tracking-widest text-xs font-bold">Hydration Level</p>
+<h2 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-white">The <span class="text-secondary">Fitup</span> Flow.</h2>
+<p class="text-on-surface-variant max-w-md">Your body is currently at <span class="text-secondary font-bold">64%</span> optimal hydration. You need 1.2L more to reach today's peak performance goal.</p>
+</div>
+<div class="md:col-span-5 relative group">
+<div class="aspect-square rounded-full bg-surface-container-low border border-white/10 p-8 flex flex-col items-center justify-center relative overflow-hidden shadow-[0_0_60px_rgba(0,238,252,0.1)]">
+<!-- Fluidic Wave Background -->
+<div class="absolute bottom-0 left-0 w-full h-[64%] bg-secondary/20 blur-2xl"></div>
+<div class="absolute bottom-0 left-0 w-full h-[64%] fluid-wave animate-pulse"></div>
+<div class="relative z-10 text-center">
+<span class="font-headline text-6xl font-black text-white">1.8<span class="text-2xl font-medium text-secondary">L</span></span>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-tighter">Consumed</p>
+</div>
+<button class="absolute bottom-10 bg-secondary text-on-secondary w-12 h-12 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,238,252,0.4)] active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Nutrition Summary Bento Grid -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<h3 class="font-headline text-3xl font-bold tracking-tight">Daily Intake</h3>
+<div class="flex gap-2">
+<div class="h-1 w-8 rounded-full bg-primary"></div>
+<div class="h-1 w-4 rounded-full bg-surface-container-highest"></div>
+<div class="h-1 w-4 rounded-full bg-surface-container-highest"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Breakfast Card -->
+<div class="bg-[#1a1919]/60 backdrop-blur-lg border border-white/10 rounded-xl p-8 space-y-6 hover:bg-surface-container-high transition-colors group">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+<span class="material-symbols-outlined">wb_twilight</span>
+</div>
+<span class="font-headline text-2xl font-bold text-on-surface">420 <span class="text-sm font-normal text-on-surface-variant">kcal</span></span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-1">Breakfast</h4>
+<p class="text-on-surface-variant text-sm">Avocado Toast, Poached Eggs, Matcha</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-primary/20 text-primary text-[10px] font-bold uppercase">High Protein</span>
+<span class="px-3 py-1 rounded-full bg-secondary/20 text-secondary text-[10px] font-bold uppercase">Greens</span>
+</div>
+</div>
+<!-- Lunch Card -->
+<div class="bg-[#1a1919]/60 backdrop-blur-lg border border-white/10 rounded-xl p-8 space-y-6 hover:bg-surface-container-high transition-colors relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 blur-[60px] rounded-full"></div>
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary border border-secondary/20">
+<span class="material-symbols-outlined">light_mode</span>
+</div>
+<span class="font-headline text-2xl font-bold text-on-surface">780 <span class="text-sm font-normal text-on-surface-variant">kcal</span></span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-1">Lunch</h4>
+<p class="text-on-surface-variant text-sm">Quinoa Power Bowl with Grilled Salmon</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary/20 text-secondary text-[10px] font-bold uppercase">Omega 3</span>
+<span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary text-[10px] font-bold uppercase">Fiber</span>
+</div>
+</div>
+<!-- Dinner Card -->
+<div class="bg-[#1a1919]/60 backdrop-blur-lg border border-white/10 rounded-xl p-8 space-y-6 hover:bg-surface-container-high transition-colors group">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary border border-tertiary/20">
+<span class="material-symbols-outlined">dark_mode</span>
+</div>
+<span class="font-headline text-2xl font-bold text-on-surface">-- <span class="text-sm font-normal text-on-surface-variant">kcal</span></span>
+</div>
+<div class="flex flex-col items-start gap-4">
+<h4 class="text-xl font-bold">Dinner</h4>
+<button class="flex items-center gap-2 px-6 py-2 rounded-full bg-white/5 border border-white/10 text-on-surface-variant text-sm font-bold hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-sm">add_circle</span>
+                        Log Meal
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Macro Pulse Tracker -->
+<section class="bg-surface-container-low rounded-xl p-8 border border-white/5 relative overflow-hidden">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
+<div class="space-y-1">
+<h3 class="font-headline text-2xl font-bold">Macronutrient Flow</h3>
+<p class="text-on-surface-variant text-sm max-w-xs">Your biological engine is currently fueled by high-density proteins and complex fibers.</p>
+</div>
+<div class="flex-1 grid grid-cols-3 gap-8">
+<div class="space-y-3">
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-widest text-primary">
+<span>Protein</span>
+<span>120/160g</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[75%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-widest text-secondary">
+<span>Carbs</span>
+<span>145/220g</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-container w-[65%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-widest text-tertiary">
+<span>Fats</span>
+<span>42/70g</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-tertiary to-tertiary-dim w-[60%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Insights Orb -->
+<section class="flex flex-col md:flex-row items-center gap-12 py-8">
+<div class="relative w-48 h-48 shrink-0">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary via-secondary to-tertiary blur-3xl opacity-20 animate-pulse"></div>
+<div class="relative w-full h-full rounded-full border border-white/10 flex items-center justify-center p-4 bg-[#0e0e0e]/40 backdrop-blur-2xl">
+<div class="w-full h-full rounded-full bg-gradient-to-br from-primary via-secondary to-tertiary opacity-80 mix-blend-screen animate-morph blur-sm"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-white" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline text-2xl font-bold tracking-tight text-white">Fitup AI Insight</h4>
+<p class="text-lg text-on-surface-variant leading-relaxed italic">"Based on your 5km run this morning, your metabolic rate is peaking. Increase your <span class="text-tertiary">Magnesium</span> and <span class="text-secondary">Electrolyte</span> intake during your next meal to prevent late-day fatigue."</p>
+<button class="bg-primary text-on-primary-container px-6 py-3 rounded-xl font-bold text-sm tracking-tight active:scale-95 transition-transform hover:opacity-90">
+                Apply Recommended Meal Plan
+            </button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shared Component Integration -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-4 pb-8 px-4 bg-[#0e0e0e]/90 backdrop-blur-2xl rounded-t-[3rem] z-50 border-t border-white/10 shadow-[0_-8px_32px_0_rgba(0,0,0,0.8)]">
+<div class="flex flex-col items-center justify-center bg-[#f3ffca] text-[#0e0e0e] rounded-full px-6 py-2 shadow-[0_0_15px_rgba(243,255,202,0.5)] active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest">Pulse</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#adaaaa] px-6 py-2 hover:text-[#f3ffca] transition-all active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest">Insights</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#adaaaa] px-6 py-2 hover:text-[#f3ffca] transition-all active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest">Training</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#adaaaa] px-6 py-2 hover:text-[#f3ffca] transition-all active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</div>
+</nav>
+</body></html>

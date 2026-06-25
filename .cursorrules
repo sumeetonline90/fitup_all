@@ -1,0 +1,261 @@
+# FITUP - Holistic Health AI
+# Master Cursor Rules & Multi-Agent Orchestration Config
+# Solo Developer: Sumeet Gupta | IVL
+
+---
+
+## MANDATORY FOR ALL AGENTS — READ THESE FIRST
+
+Before doing ANYTHING, every agent must read these 4 context files:
+
+1. `docs/context/PROJECT_STATE.md` — What's built and what isn't. Check this before writing any code so you don't duplicate work.
+2. `docs/context/ARCHITECTURE_DECISIONS.md` — All structural decisions already made. Follow them. Don't invent new patterns.
+3. `docs/context/API_CONTRACTS.md` — The agreed interfaces between layers. Frontend reads what's available. Backend implements what's listed.
+4. `docs/context/KNOWN_ISSUES.md` — Bugs and decisions log. Check before debugging — it may already be solved.
+
+After completing ANY task, agents must:
+- Update `PROJECT_STATE.md` — mark completed items as ✅
+- Update `API_CONTRACTS.md` — if a new provider or entity was created
+- Update `KNOWN_ISSUES.md` — if a bug was found or fixed
+- Update `ARCHITECTURE_DECISIONS.md` — if a new structural decision was made
+
+---
+
+## PROJECT IDENTITY
+- **App Name**: Fitup - Holistic Health AI
+- **Platform**: Flutter (Android + iOS + Web) with single codebase
+- **Backend**: Firebase (Firestore, Auth, Functions, Storage) with repository pattern for future Supabase migration
+- **AI Engine**: Google Gemini 2.0 Flash / Pro
+- **State Management**: Riverpod 2.x
+- **Architecture**: Clean Architecture (data / domain / presentation layers)
+- **Design Language**: Neon Fluidic - dark backgrounds (#0A0E21), glassmorphism cards, neon accents (cyan #00E5FF, magenta #FF006E, electric blue #3D5AFE), gradient buttons
+
+---
+
+## MULTI-AGENT ORCHESTRATION
+
+This project uses a 3-agent system. The **Main Orchestrator** coordinates work between **Agent Frontend** and **Agent Backend**. Claude Code is used for final review, complex debugging, and architecture decisions.
+
+### Agent Roles Summary
+| Agent | Role | Primary Files |
+|-------|------|---------------|
+| **Main (You/Orchestrator)** | Architecture, coordination, code review, integration | All files, especially `lib/core/`, routing, DI |
+| **Agent Frontend** | UI screens, widgets, animations, responsive layouts | `lib/features/*/presentation/`, `lib/shared/widgets/` |
+| **Agent Backend** | Firebase, APIs, data models, repositories, services | `lib/features/*/data/`, `lib/services/`, `firebase/` |
+
+### How to invoke agents in Cursor:
+1. Open Cursor Chat or Composer
+2. Tag the agent context file: `@.cursor/agents/agent_frontend.md` or `@.cursor/agents/agent_backend.md`
+3. Give the agent a task referencing the current sprint task from `docs/current_sprint.md`
+4. The agent will follow its role-specific rules and coding standards
+
+---
+
+## CODING STANDARDS (ALL AGENTS MUST FOLLOW)
+
+### Dart / Flutter Conventions
+- Use `dart format` with 80-char line length
+- Prefer `const` constructors everywhere possible
+- Use `final` for all variables that don't need reassignment
+- Name files in `snake_case`, classes in `PascalCase`, variables/functions in `camelCase`
+- Every public API must have a dartdoc comment
+- No `print()` in production code - use a logger service
+- Always handle errors with `Either<Failure, Success>` pattern or `AsyncValue` from Riverpod
+
+### Architecture Rules
+```
+lib/
+  core/                          # Shared foundation
+    constants/                   # App-wide constants, API keys (from env)
+    theme/                       # ThemeData, colors, text styles, gradients
+    utils/                       # Helpers, extensions, formatters
+    error/                       # Failure classes, error handling
+    di/                          # Dependency injection setup (get_it)
+    router/                      # go_router configuration
+    widgets/                     # Base widget classes
+  features/                      # Feature modules (1 folder per module)
+    auth/
+      data/
+        models/                  # Firestore DTOs, JSON serialization
+        datasources/             # Remote (Firebase) + Local (Hive/SQLite)
+        repositories/            # Repository implementations
+      domain/
+        entities/                # Pure Dart objects (no Firebase deps)
+        repositories/            # Abstract repository interfaces
+        usecases/                # Business logic units
+      presentation/
+        screens/                 # Full page widgets
+        widgets/                 # Feature-specific widgets
+        providers/               # Riverpod providers
+    activity/                    # Same structure as auth
+    diet/
+    workout/
+    health/
+    mental_wellbeing/
+    community/
+    profile/
+    home/
+    fitcoins/
+  services/                      # Cross-cutting services
+    ai_service.dart              # Gemini API wrapper
+    notification_service.dart
+    health_connect_service.dart  # Android Health Connect
+    healthkit_service.dart       # iOS HealthKit
+    analytics_service.dart       # Firebase Analytics
+    location_service.dart        # GPS tracking
+    sync_service.dart            # Offline sync manager
+  shared/
+    widgets/                     # Reusable UI components
+      glass_card.dart
+      neon_button.dart
+      gradient_app_bar.dart
+      chart_wrapper.dart
+      shimmer_loading.dart
+      module_summary_card.dart
+    models/                      # Shared data models
+    extensions/                  # Dart extensions
+```
+
+### State Management (Riverpod)
+- Use `@riverpod` annotation (code generation) for all providers
+- Prefer `AsyncNotifier` for stateful logic with async operations
+- Use `ref.watch()` in build methods, `ref.read()` in callbacks
+- Keep providers small and composable
+- Every provider file ends with `_provider.dart`
+
+### Firebase / Backend Rules
+- ALL Firestore access goes through repository classes - never call Firestore directly from UI
+- Repository interfaces live in `domain/repositories/` (abstract classes)
+- Repository implementations live in `data/repositories/`
+- This abstraction enables future migration to Supabase without touching UI or domain logic
+- Use Firebase security rules - never trust the client
+- Cloud Functions for server-side validation and AI processing
+- Store sensitive keys in Firebase Remote Config, not in code
+
+### Repository Pattern (Migration-Ready)
+```dart
+// domain/repositories/activity_repository.dart (INTERFACE)
+abstract class ActivityRepository {
+  Future<Either<Failure, List<Activity>>> getActivities(String userId);
+  Future<Either<Failure, Activity>> saveActivity(Activity activity);
+  Stream<List<Activity>> watchActivities(String userId);
+}
+
+// data/repositories/firebase_activity_repository.dart (IMPLEMENTATION)
+class FirebaseActivityRepository implements ActivityRepository {
+  final FirebaseFirestore _firestore;
+  // ... Firebase-specific implementation
+}
+
+// FUTURE: data/repositories/supabase_activity_repository.dart
+// class SupabaseActivityRepository implements ActivityRepository { ... }
+```
+
+### UI / Design Rules
+- Dark theme is DEFAULT. Light theme is optional.
+- All colors come from `core/theme/app_colors.dart` - never hardcode hex values
+- Glassmorphism cards use: `BackdropFilter` + `ClipRRect` + semi-transparent background
+- Neon glow effects: `BoxShadow` with neon color and blur radius 15-25
+- Animations: use `Lottie` for complex, `AnimatedContainer`/`Hero` for simple transitions
+- Bottom navigation with 5 tabs: Home, Activity, Diet, Workout, Profile
+- Each module accessed via Home cards OR bottom nav sub-navigation
+- All screens must be responsive (mobile portrait primary, landscape optional, web adaptive)
+- Reference UI screenshots from `docs/ui_screenshots/` folder when available
+
+### Testing Standards
+- Every repository must have unit tests
+- Every provider/notifier must have unit tests
+- Critical UI flows (onboarding, activity tracking, meal logging) need widget tests
+- Integration tests for auth flow and data sync
+- Test files mirror source structure: `test/features/activity/...`
+- Use `mocktail` for mocking
+
+### Git Conventions
+- Branch naming: `feature/activity-gps-tracking`, `fix/diet-calorie-calc`, `chore/update-deps`
+- Commit messages: `feat(activity): add GPS route polyline rendering`
+- PR = 1 feature or fix, never mix concerns
+- Squash merge to main
+
+---
+
+## KEY PACKAGES
+```yaml
+dependencies:
+  flutter_riverpod: ^2.5.0
+  riverpod_annotation: ^2.3.0
+  go_router: ^14.0.0
+  google_maps_flutter: ^2.6.0
+  geolocator: ^12.0.0
+  health: ^10.0.0
+  fl_chart: ^0.68.0
+  mobile_scanner: ^5.0.0
+  google_generative_ai: ^0.4.0
+  firebase_core: ^3.0.0
+  cloud_firestore: ^5.0.0
+  firebase_auth: ^5.0.0
+  firebase_storage: ^2.0.0
+  flutter_local_notifications: ^17.0.0
+  purchases_flutter: ^7.0.0
+  image_picker: ^1.0.0
+  speech_to_text: ^6.6.0
+  lottie: ^3.1.0
+  get_it: ^7.7.0
+  injectable: ^2.4.0
+  drift: ^2.18.0
+  hive_flutter: ^1.1.0
+  dartz: ^0.10.1  # Either type for error handling
+  freezed_annotation: ^2.4.0
+  json_annotation: ^4.9.0
+  connectivity_plus: ^6.0.0
+  flutter_animate: ^4.5.0
+  cached_network_image: ^3.3.0
+  path_provider: ^2.1.0
+  share_plus: ^9.0.0
+  url_launcher: ^6.2.0
+  intl: ^0.19.0
+
+dev_dependencies:
+  riverpod_generator: ^2.4.0
+  build_runner: ^2.4.0
+  freezed: ^2.5.0
+  json_serializable: ^6.8.0
+  injectable_generator: ^2.6.0
+  drift_dev: ^2.18.0
+  mocktail: ^1.0.0
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+```
+
+---
+
+## GEMINI AI INTEGRATION RULES
+- Use Gemini Flash for real-time responses (meal logging, quick questions)
+- Use Gemini Pro for complex holistic insights (weekly reports, cross-module analysis)
+- Always include user context in system prompt: goals, recent data summary, health conditions
+- Cache common AI responses locally (Hive) with 24-hour TTL
+- Rate limit client-side: max 30 requests/hour per user
+- Never send raw PII to Gemini - anonymize where possible
+- AI responses must include disclaimers: "This is not medical advice"
+- Structure all AI prompts in `lib/services/ai_prompts/` as template strings
+
+---
+
+## CURRENT PHASE
+Check `docs/current_sprint.md` for the active phase and tasks.
+
+## UI REFERENCE
+When Stitch-designed screenshots are available, they will be in `docs/ui_screenshots/`.
+Always reference these when building UI components. Match the designs pixel-perfectly.
+
+---
+
+## IMPORTANT REMINDERS
+1. **Offline-first**: Every feature must work without internet. Sync when connected.
+2. **Repository pattern**: Never bypass it. This is your migration insurance.
+3. **Feature flags**: Use Firebase Remote Config to toggle incomplete features.
+4. **No medical claims**: AI insights use language like "consider", "you may want to", never "you should" or "you have".
+5. **Privacy**: Encrypt health data at rest. Implement DPDPA-compliant data export/deletion.
+6. **Battery**: GPS tracking must use battery-efficient modes. Test on real devices.
+7. **Indian food focus**: Food database must have comprehensive Indian cuisine coverage.

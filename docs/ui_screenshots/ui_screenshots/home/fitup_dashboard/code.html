@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fitup - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed": "#cafd00",
+                        "surface-container-low": "#131313",
+                        "on-tertiary-fixed-variant": "#760037",
+                        "inverse-surface": "#fcf9f8",
+                        "primary": "#f3ffca",
+                        "inverse-primary": "#516700",
+                        "surface-container-highest": "#262626",
+                        "tertiary-container": "#ff067f",
+                        "surface-container-high": "#201f1f",
+                        "surface-container-lowest": "#000000",
+                        "on-secondary": "#005359",
+                        "on-error": "#450900",
+                        "on-secondary-fixed-variant": "#005e64",
+                        "background": "#0e0e0e",
+                        "secondary": "#00eefc",
+                        "surface-dim": "#0e0e0e",
+                        "secondary-fixed": "#00eefc",
+                        "on-surface": "#ffffff",
+                        "inverse-on-surface": "#565555",
+                        "on-primary": "#516700",
+                        "error-dim": "#d53d18",
+                        "on-tertiary": "#47001f",
+                        "outline": "#767575",
+                        "error-container": "#b92902",
+                        "surface-container": "#1a1919",
+                        "tertiary-fixed": "#ff8eae",
+                        "surface-variant": "#262626",
+                        "error": "#ff7351",
+                        "on-primary-container": "#4a5e00",
+                        "on-tertiary-container": "#000000",
+                        "tertiary-dim": "#e30071",
+                        "surface": "#0e0e0e",
+                        "secondary-container": "#006970",
+                        "surface-tint": "#f3ffca",
+                        "surface-bright": "#2c2c2c",
+                        "on-tertiary-fixed": "#380017",
+                        "on-secondary-container": "#e3fdff",
+                        "on-error-container": "#ffd2c8",
+                        "primary-fixed-dim": "#beee00",
+                        "on-primary-fixed-variant": "#526900",
+                        "on-background": "#ffffff",
+                        "tertiary": "#ff6b9b",
+                        "on-primary-fixed": "#3a4a00",
+                        "secondary-dim": "#00deec",
+                        "primary-dim": "#beee00",
+                        "secondary-fixed-dim": "#00deec",
+                        "on-secondary-fixed": "#003f43",
+                        "tertiary-fixed-dim": "#ff75a0",
+                        "outline-variant": "#484847",
+                        "on-surface-variant": "#adaaaa",
+                        "primary-container": "#cafd00"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0e0e0e;
+            color: #ffffff;
+            font-family: 'Manrope', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(26, 25, 25, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+        .fluid-gradient-bg {
+            background: linear-gradient(135deg, #f3ffca 0%, #cafd00 100%);
+        }
+        .neon-glow-secondary {
+            box-shadow: 0 0 20px rgba(0, 238, 252, 0.15);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background min-h-screen pb-40">
+<!-- TopAppBar from COMPONENTS_13 -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,238,252,0.1)]">
+<div class="flex items-center justify-between px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border-2 border-[#f3ffca] overflow-hidden">
+<img alt="Fitup Neon Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAccF6NyJHyz0ZKSVH7ObH2pmnSvNv7wdTBttSmtPrHHpd5t-4gDAK1EaAK5HCjwKRG-exfbA4mMZ1zdCRh2hRWRUE0CiLo1AZvEmp7eX_X23e5mj5djshTpmbYdzzt2Sj-l3NNhy3iJqTrwSD5NTrGc6S0sYznIcZZSDnLGGv7DX1y0bgH_NDpy6ko4EavSKpz3aDh_WWKX-GLuUynnBI6Y7r1GczjSLLCB3f5zWQlmMcX_HTpSsNMfKVGNpxVE9CzW082Do3e_0z6"/>
+</div>
+<span class="text-[#f3ffca] font-['Space_Grotesk'] font-black tracking-tighter text-3xl italic">Fitup</span>
+</div>
+<!-- Rewards Summary (Integrated into Top Bar Area) -->
+<div class="flex items-center gap-2 bg-[#1a1919]/60 px-4 py-2 rounded-full border border-white/5 active:scale-95 transition-transform duration-200 cursor-pointer">
+<img alt="Fitcoins" class="w-6 h-6 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp9gebeKnQQwjVuguB8Pz_lupFQHZNDIxp5WaxJVYYoGzDA91spYpoMaNQ6gQBfIcTBzEdwHenOV_843a3OZdbQYG_bw7qM9LmmU9D2wWOEloLBZbi-L4iBK2pWjGT-VRHBM2ZLIDliGTm3lVuY-yXO1Q_UwtHKeIOoYS0DK3sXQ5nrS6zzxm227BCGV1g12KGbVYFqptx93RTCJgfjsOzbXSlFX0oR9oxzPquUY-peFwmlQ68XiHGvCOUap_Iq9Aj8LYIOpFEnmr8"/>
+<span class="font-['Space_Grotesk'] font-bold tracking-tight text-[#f3ffca]">2,450 FC</span>
+</div>
+</div>
+</nav>
+<main class="pt-24 px-6 max-w-7xl mx-auto space-y-10">
+<!-- Hero Insight Section -->
+<section class="relative overflow-hidden rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-8 bg-surface-container-low">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary/10 rounded-full blur-[100px]"></div>
+<div class="relative z-10 flex-1 space-y-4">
+<p class="font-label text-secondary uppercase tracking-[0.2em] text-xs font-bold">Daily Narrative</p>
+<h1 class="font-headline text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter text-on-background">
+                    Your biological <br/><span class="text-primary-fixed">rhythm is peaking.</span>
+</h1>
+<p class="font-body text-on-surface-variant max-w-md text-lg">
+                    AI Analysis shows your recovery is 14% higher than average. Perfect window for high-intensity training.
+                </p>
+</div>
+<div class="relative z-10 w-full md:w-1/3 flex flex-col gap-4">
+<div class="flex justify-between items-end mb-2">
+<span class="font-label text-sm text-on-surface-variant">Daily Goal Progress</span>
+<span class="font-headline text-2xl font-bold text-primary">82%</span>
+</div>
+<div class="w-full h-4 bg-surface-container-highest rounded-full overflow-hidden p-[2px]">
+<div class="h-full rounded-full bg-gradient-to-r from-secondary to-primary-fixed" style="width: 82%;"></div>
+</div>
+<div class="flex gap-4 mt-2">
+<div class="flex-1 glass-card p-4 rounded-lg flex flex-col gap-1">
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Burned</span>
+<span class="text-xl font-bold font-headline">1,840 <span class="text-xs font-normal text-on-surface-variant">kcal</span></span>
+</div>
+<div class="flex-1 glass-card p-4 rounded-lg flex flex-col gap-1">
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Steps</span>
+<span class="text-xl font-bold font-headline">9.2k</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Dashboard -->
+<section class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+<!-- Activity Module -->
+<div class="md:col-span-2 md:row-span-2 glass-card rounded-xl p-8 flex flex-col justify-between group cursor-pointer hover:border-primary/30 transition-all duration-500">
+<div class="flex justify-between items-start">
+<div class="p-3 bg-primary/10 rounded-2xl">
+<span class="material-symbols-outlined text-primary text-3xl">fitness_center</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">north_east</span>
+</div>
+<div class="space-y-6">
+<div>
+<h3 class="font-headline text-3xl font-bold mb-2">Activity</h3>
+<p class="text-on-surface-variant text-sm max-w-xs">Intensive cardio detected at 08:30 AM. Heart rate peaked at 164 BPM.</p>
+</div>
+<div class="relative h-32 w-full flex items-end gap-1">
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[40%] group-hover:bg-primary/40 transition-all"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[60%] group-hover:bg-primary/40 transition-all"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[30%] group-hover:bg-primary/40 transition-all"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[80%] group-hover:bg-primary/40 transition-all"></div>
+<div class="flex-1 bg-primary rounded-t-sm h-[95%] shadow-[0_0_15px_rgba(243,255,202,0.3)]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[50%] group-hover:bg-primary/40 transition-all"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[40%] group-hover:bg-primary/40 transition-all"></div>
+</div>
+</div>
+</div>
+<!-- Diet Module -->
+<div class="md:col-span-2 glass-card rounded-xl p-6 flex items-center justify-between group cursor-pointer hover:border-secondary/30 transition-all duration-500 overflow-hidden relative">
+<div class="space-y-4 relative z-10">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-secondary/10 rounded-lg">
+<span class="material-symbols-outlined text-secondary">restaurant</span>
+</div>
+<h3 class="font-headline text-xl font-bold">Diet &amp; Fuel</h3>
+</div>
+<div class="flex gap-8">
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Protein</p>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="font-bold">120g</span>
+</div>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Hydration</p>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="font-bold">2.4L</span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-32 h-32 relative z-10">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#262626" stroke-width="3"></path>
+<path class="neon-glow-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#00eefc" stroke-dasharray="75, 100" stroke-width="3"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-xs font-bold font-headline">75%</span>
+</div>
+</div>
+</div>
+<!-- Vitals Module -->
+<div class="glass-card rounded-xl p-6 flex flex-col justify-between group cursor-pointer hover:border-tertiary/30 transition-all duration-500">
+<div class="flex justify-between items-center">
+<div class="p-2 bg-tertiary/10 rounded-lg">
+<span class="material-symbols-outlined text-tertiary">monitor_heart</span>
+</div>
+<span class="text-tertiary font-bold text-xs">Live</span>
+</div>
+<div class="mt-4">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Resting HR</p>
+<h3 class="font-headline text-3xl font-bold text-on-background">58 <span class="text-sm font-normal text-on-surface-variant">BPM</span></h3>
+</div>
+</div>
+<!-- Wellbeing Module -->
+<div class="glass-card rounded-xl p-6 flex flex-col justify-between group cursor-pointer hover:border-white/20 transition-all duration-500">
+<div class="flex justify-between items-center">
+<div class="p-2 bg-on-surface/10 rounded-lg">
+<span class="material-symbols-outlined text-on-surface">psychology</span>
+</div>
+</div>
+<div class="mt-4">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Sleep Quality</p>
+<h3 class="font-headline text-3xl font-bold text-on-background">Optimal</h3>
+<p class="text-[10px] text-primary mt-1">+12% Deep Sleep</p>
+</div>
+</div>
+</section>
+<!-- AI Assistant / Insight Orb -->
+<div class="flex items-center gap-6 py-12">
+<div class="relative w-24 h-24 shrink-0">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary via-secondary to-tertiary rounded-full animate-pulse blur-xl opacity-40"></div>
+<div class="relative w-full h-full rounded-full bg-gradient-to-br from-[#1a1919] to-black border border-white/10 flex items-center justify-center overflow-hidden">
+<div class="w-12 h-12 bg-primary/20 rounded-full animate-ping"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<h4 class="font-headline text-xl font-bold">Fitup Health AI</h4>
+<p class="text-on-surface-variant text-sm">"I've noticed your cortisol levels are slightly elevated. Consider a 5-minute guided breathwork session to recalibrate."</p>
+<button class="mt-2 text-primary text-sm font-bold flex items-center gap-2 group">
+                    Start Session <span class="material-symbols-outlined text-xs group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+<!-- Rewards Glass Card Module -->
+<section class="glass-card rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 group hover:border-primary/20 transition-all duration-500">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Fitcoins Rewards" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp9gebeKnQQwjVuguB8Pz_lupFQHZNDIxp5WaxJVYYoGzDA91spYpoMaNQ6gQBfIcTBzEdwHenOV_843a3OZdbQYG_bw7qM9LmmU9D2wWOEloLBZbi-L4iBK2pWjGT-VRHBM2ZLIDliGTm3lVuY-yXO1Q_UwtHKeIOoYS0DK3sXQ5nrS6zzxm227BCGV1g12KGbVYFqptx93RTCJgfjsOzbXSlFX0oR9oxzPquUY-peFwmlQ68XiHGvCOUap_Iq9Aj8LYIOpFEnmr8"/>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-on-background">Fitcoins Rewards</h3>
+<p class="text-sm text-on-surface-variant">You've earned 120 FC today</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="px-6 py-2 bg-primary text-on-primary font-bold rounded-full text-sm active:scale-95 transition-transform">Redeem</button>
+<button class="px-6 py-2 border border-white/10 text-white font-bold rounded-full text-sm hover:bg-white/5 transition-colors">History</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar from COMPONENTS_13 -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-4 pb-8 px-4 bg-[#0e0e0e]/90 backdrop-blur-2xl rounded-t-[3rem] z-50 border-t border-white/10 shadow-[0_-8px_32px_0_rgba(0,0,0,0.8)]">
+<div class="flex flex-col items-center justify-center bg-[#f3ffca] text-[#0e0e0e] rounded-full px-6 py-2 shadow-[0_0_15px_rgba(243,255,202,0.5)] active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Pulse</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#adaaaa] px-6 py-2 hover:text-[#f3ffca] transition-all active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Insights</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#adaaaa] px-6 py-2 hover:text-[#f3ffca] transition-all active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Training</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#adaaaa] px-6 py-2 hover:text-[#f3ffca] transition-all active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

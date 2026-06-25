@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fitup | Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed": "#cafd00",
+                        "surface-container-low": "#131313",
+                        "on-tertiary-fixed-variant": "#760037",
+                        "inverse-surface": "#fcf9f8",
+                        "primary": "#f3ffca",
+                        "inverse-primary": "#516700",
+                        "surface-container-highest": "#262626",
+                        "tertiary-container": "#ff067f",
+                        "surface-container-high": "#201f1f",
+                        "surface-container-lowest": "#000000",
+                        "on-secondary": "#005359",
+                        "on-error": "#450900",
+                        "on-secondary-fixed-variant": "#005e64",
+                        "background": "#0e0e0e",
+                        "secondary": "#00eefc",
+                        "surface-dim": "#0e0e0e",
+                        "secondary-fixed": "#00eefc",
+                        "on-surface": "#ffffff",
+                        "inverse-on-surface": "#565555",
+                        "on-primary": "#516700",
+                        "error-dim": "#d53d18",
+                        "on-tertiary": "#47001f",
+                        "outline": "#767575",
+                        "error-container": "#b92902",
+                        "surface-container": "#1a1919",
+                        "tertiary-fixed": "#ff8eae",
+                        "surface-variant": "#262626",
+                        "error": "#ff7351",
+                        "on-primary-container": "#4a5e00",
+                        "on-tertiary-container": "#000000",
+                        "tertiary-dim": "#e30071",
+                        "surface": "#0e0e0e",
+                        "secondary-container": "#006970",
+                        "surface-tint": "#f3ffca",
+                        "surface-bright": "#2c2c2c",
+                        "on-tertiary-fixed": "#380017",
+                        "on-secondary-container": "#e3fdff",
+                        "on-error-container": "#ffd2c8",
+                        "primary-fixed-dim": "#beee00",
+                        "on-primary-fixed-variant": "#526900",
+                        "on-background": "#ffffff",
+                        "tertiary": "#ff6b9b",
+                        "on-primary-fixed": "#3a4a00",
+                        "secondary-dim": "#00deec",
+                        "primary-dim": "#beee00",
+                        "secondary-fixed-dim": "#00deec",
+                        "on-secondary-fixed": "#003f43",
+                        "tertiary-fixed-dim": "#ff75a0",
+                        "outline-variant": "#484847",
+                        "on-surface-variant": "#adaaaa",
+                        "primary-container": "#cafd00"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fluid-glow {
+            background: radial-gradient(circle at center, rgba(243, 255, 202, 0.15) 0%, transparent 70%);
+        }
+        .glass-card {
+            background: rgba(26, 25, 25, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-text-glow {
+            text-shadow: 0 0 20px rgba(243, 255, 202, 0.4);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body overflow-x-hidden selection:bg-primary selection:text-on-primary">
+<!-- Top App Bar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,238,252,0.1)]">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-3 active:scale-95 transition-transform">
+<img alt="Fitup Neon Logo" class="w-10 h-10 object-contain rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmS1nRXEI9p6MrDFjc3pzNmSVQyCGXuIp3O1EaFN-Ntgxhh30HE0JFWw07H3Z2xXJNHSd4ew2F1yWnSQwT2Z1frBIuJqMKo3UeIYFueSgUzRdDDvNrgACTTrGJeNoyjJn61pDSLuw1Y77JmVXbrTwJs9QbED4_yxeZ7sykZWzNHNJHOemB2nZq_OyanGb_waI-Ul1c5ZAM0mFTub7OkaLnTXNnb5GW6g1jldCXh3QfaCgLWwxhXV9vvTCGfEEhSPi1DPSWdLmsFMP8"/>
+<span class="text-[#f3ffca] font-['Space_Grotesk'] font-black tracking-tighter text-3xl italic">Fitup</span>
+</div>
+<button class="text-[#f3ffca] active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</header>
+<!-- Background Accents -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute top-1/2 -right-48 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[150px]"></div>
+<div class="absolute bottom-[-10%] left-1/4 w-[600px] h-[300px] bg-tertiary/5 rounded-full blur-[100px] rotate-12"></div>
+</div>
+<!-- Main Content Canvas -->
+<main class="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-32">
+<!-- Brand Identity Section -->
+<div class="w-full max-w-md flex flex-col items-center mb-12 text-center">
+<!-- New Logo -->
+<div class="relative mb-8 group">
+<div class="absolute inset-0 bg-primary/20 blur-2xl rounded-full scale-110 group-hover:scale-125 transition-transform duration-700"></div>
+<div class="relative w-28 h-28 flex items-center justify-center bg-surface-container-high rounded-2xl border border-primary/30 shadow-[0_0_30px_rgba(243,255,202,0.2)] overflow-hidden">
+<img alt="Fitup Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmS1nRXEI9p6MrDFjc3pzNmSVQyCGXuIp3O1EaFN-Ntgxhh30HE0JFWw07H3Z2xXJNHSd4ew2F1yWnSQwT2Z1frBIuJqMKo3UeIYFueSgUzRdDDvNrgACTTrGJeNoyjJn61pDSLuw1Y77JmVXbrTwJs9QbED4_yxeZ7sykZWzNHNJHOemB2nZq_OyanGb_waI-Ul1c5ZAM0mFTub7OkaLnTXNnb5GW6g1jldCXh3QfaCgLWwxhXV9vvTCGfEEhSPi1DPSWdLmsFMP8"/>
+</div>
+</div>
+<h1 class="font-headline text-4xl md:text-5xl font-bold tracking-tight text-white mb-3">
+                Welcome to <span class="text-primary italic">Fitup</span>
+</h1>
+<p class="text-on-surface-variant font-medium text-lg max-w-[280px]">
+                Your health narrative, decoded by intelligence.
+            </p>
+</div>
+<!-- Login / Onboarding Glass Card -->
+<div class="w-full max-w-md glass-card p-8 rounded-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
+<!-- Tab Toggle -->
+<div class="flex p-1 bg-surface-container-lowest rounded-full mb-8">
+<button class="flex-1 py-2 text-sm font-semibold rounded-full bg-primary text-on-primary shadow-lg transition-all">Sign In</button>
+<button class="flex-1 py-2 text-sm font-semibold rounded-full text-on-surface-variant hover:text-on-surface transition-all">Create Account</button>
+</div>
+<!-- Social Login -->
+<div class="space-y-4 mb-8">
+<button class="w-full flex items-center justify-center gap-3 bg-white text-surface-container-lowest font-bold py-4 rounded-full active:scale-[0.98] transition-all hover:bg-white/90">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.65l-3.57-2.77c-.99.66-2.26 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+                    Continue with Google
+                </button>
+</div>
+<div class="relative flex items-center gap-4 mb-8">
+<div class="flex-1 h-px bg-outline-variant/30"></div>
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">or email</span>
+<div class="flex-1 h-px bg-outline-variant/30"></div>
+</div>
+<!-- Email Form -->
+<form action="#" class="space-y-6">
+<div class="space-y-2">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-widest ml-4">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-primary/50 text-xl">alternate_email</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-full py-4 pl-14 pr-6 text-on-surface focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-outline/50" placeholder="vital.sign@fitup.ai" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-widest ml-4">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-primary/50 text-xl">lock</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-full py-4 pl-14 pr-6 text-on-surface focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-outline/50" placeholder="••••••••" type="password"/>
+<button class="absolute right-5 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+<div class="flex justify-end pr-2">
+<a class="text-xs font-semibold text-secondary hover:underline" href="#">Forgot password?</a>
+</div>
+</div>
+<!-- Synchronize Life CTA -->
+<button class="w-full bg-primary-container text-on-primary-container font-black text-lg py-4 rounded-xl shadow-[0_4px_20px_rgba(202,253,0,0.3)] hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2 group" type="submit">
+                    Synchronize Life
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Footer / Legal -->
+<footer class="mt-12 text-center">
+<p class="text-on-surface-variant text-sm font-medium">
+                By continuing, you agree to our 
+                <a class="text-white hover:text-primary transition-colors underline underline-offset-4 decoration-outline-variant" href="#">Terms of Biology</a>
+</p>
+<div class="mt-8 flex items-center justify-center gap-6">
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-full border border-outline-variant/10">
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary">System Online</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-full border border-outline-variant/10">
+<span class="material-symbols-outlined text-sm text-tertiary">security</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-tertiary">Encrypted</span>
+</div>
+</div>
+</footer>
+</main>
+<!-- Bottom Navigation Bar (Shared Component) -->
+<nav class="fixed bottom-0 left-0 w-full bg-[#0e0e0e]/90 backdrop-blur-2xl border-t border-white/10 rounded-t-[3rem] z-50 shadow-[0_-8px_32px_0_rgba(0,0,0,0.8)]">
+<div class="flex justify-around items-center pt-4 pb-8 px-4">
+<a class="flex flex-col items-center justify-center bg-[#f3ffca] text-[#0e0e0e] rounded-full px-6 py-2 shadow-[0_0_15px_rgba(243,255,202,0.5)] active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest">Pulse</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-6 py-2 hover:text-[#f3ffca] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest">Insights</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-6 py-2 hover:text-[#f3ffca] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-6 py-2 hover:text-[#f3ffca] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</a>
+</div>
+</nav>
+<!-- Decorative Insight Orb -->
+<div class="fixed -bottom-32 -left-32 w-64 h-64 pointer-events-none opacity-20 z-0">
+<svg class="w-full h-full" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="orbGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:var(--primary)"></stop>
+<stop offset="50%" style="stop-color:var(--secondary)"></stop>
+<stop offset="100%" style="stop-color:var(--tertiary)"></stop>
+</lineargradient>
+</defs>
+<path d="M44.7,-76.4C58.1,-69.2,69.2,-58.1,77.3,-44.7C85.4,-31.3,90.5,-15.7,89.7,-0.5C88.8,14.7,82,29.4,73.1,42.4C64.2,55.4,53.2,66.7,40.1,73.8C27,80.9,13.5,83.8,-0.7,85.1C-14.9,86.4,-29.8,86.1,-43.3,80.2C-56.8,74.3,-68.9,62.8,-77.3,49.2C-85.7,35.6,-90.4,19.8,-90.8,3.7C-91.2,-12.4,-87.3,-28.8,-78.9,-42.4C-70.5,-56,-57.6,-66.8,-43.5,-73.6C-29.4,-80.4,-14.7,-83.2,0.4,-83.8C15.5,-84.4,31.3,-83.6,44.7,-76.4Z" fill="url(#orbGradient)" transform="translate(100 100)"></path>
+</svg>
+</div>
+</body></html>

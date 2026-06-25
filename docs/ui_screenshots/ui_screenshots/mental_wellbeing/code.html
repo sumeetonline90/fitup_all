@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#cafd00",
+              "surface-container-low": "#131313",
+              "on-tertiary-fixed-variant": "#760037",
+              "inverse-surface": "#fcf9f8",
+              "primary": "#f3ffca",
+              "inverse-primary": "#516700",
+              "surface-container-highest": "#262626",
+              "tertiary-container": "#ff067f",
+              "surface-container-high": "#201f1f",
+              "surface-container-lowest": "#000000",
+              "on-secondary": "#005359",
+              "on-error": "#450900",
+              "on-secondary-fixed-variant": "#005e64",
+              "background": "#0e0e0e",
+              "secondary": "#00eefc",
+              "surface-dim": "#0e0e0e",
+              "secondary-fixed": "#00eefc",
+              "on-surface": "#ffffff",
+              "inverse-on-surface": "#565555",
+              "on-primary": "#516700",
+              "error-dim": "#d53d18",
+              "on-tertiary": "#47001f",
+              "outline": "#767575",
+              "error-container": "#b92902",
+              "surface-container": "#1a1919",
+              "tertiary-fixed": "#ff8eae",
+              "surface-variant": "#262626",
+              "error": "#ff7351",
+              "on-primary-container": "#4a5e00",
+              "on-tertiary-container": "#000000",
+              "tertiary-dim": "#e30071",
+              "surface": "#0e0e0e",
+              "secondary-container": "#006970",
+              "surface-tint": "#f3ffca",
+              "surface-bright": "#2c2c2c",
+              "on-tertiary-fixed": "#380017",
+              "on-secondary-container": "#e3fdff",
+              "on-error-container": "#ffd2c8",
+              "primary-fixed-dim": "#beee00",
+              "on-primary-fixed-variant": "#526900",
+              "on-background": "#ffffff",
+              "tertiary": "#ff6b9b",
+              "on-primary-fixed": "#3a4a00",
+              "secondary-dim": "#00deec",
+              "primary-dim": "#beee00",
+              "secondary-fixed-dim": "#00deec",
+              "on-secondary-fixed": "#003f43",
+              "tertiary-fixed-dim": "#ff75a0",
+              "outline-variant": "#484847",
+              "on-surface-variant": "#adaaaa",
+              "primary-container": "#cafd00"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(26, 25, 25, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+        .neon-glow-secondary {
+            box-shadow: 0 0 40px -10px rgba(0, 238, 252, 0.3);
+        }
+        .neon-glow-tertiary {
+            box-shadow: 0 0 40px -10px rgba(255, 107, 155, 0.3);
+        }
+        .pulse-orb {
+            background: radial-gradient(circle, rgba(243,255,202,0.4) 0%, rgba(0,238,252,0.1) 50%, transparent 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full bg-gradient-to-b from-[#1a1919] to-transparent shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant/30 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile photo with subtle lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe-fUNd1jPufIyVHwoTYbrvnN9zhyYXhLIvMbSZvhCi0whvSiXVluWS48o59Wvm-Hxvi2Yck2Ez_irMVnUlCQSF0xDg7pSxZOz_5559fGomrh2lyXo5fNykSkojJTPjPaP4W2HYkkJbYlQGL4l5LR4FTpyS_ljXWD6b2AI0EVoLougICwIOg8qLo9cmDsJtYNe1j2Jx-BqAVbALbV2RkCZT7n5yPVP417G5GSes5QJWPx5B9WbAoVlhBX_u0Oyv3HFLAxS0RDVwbPY"/>
+</div>
+<h1 class="text-2xl font-black text-[#f3ffca] tracking-tighter font-headline">Pulse AI</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="px-4 py-1.5 rounded-full bg-surface-container-highest border border-outline-variant/20 flex items-center gap-2">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Credits</span>
+<span class="text-[#f3ffca] font-headline font-bold">2,450 FC</span>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">notifications</button>
+</div>
+</header>
+<main class="pt-28 pb-32 px-6 max-w-7xl mx-auto space-y-12">
+<!-- Hero: The Insight Orb & Daily Summary -->
+<section class="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary/20 text-secondary text-xs font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+                    AI Mental Scan Active
+                </div>
+<h2 class="text-5xl md:text-7xl font-headline font-bold tracking-tight text-on-surface leading-[1.1]">
+                    Your mind is in <span class="text-primary italic">flow</span> today.
+                </h2>
+<p class="text-on-surface-variant text-lg max-w-xl">
+                    Biometric signals suggest high parasympathetic activity. It's a prime window for deep cognitive work or creative exploration.
+                </p>
+</div>
+<div class="lg:col-span-5 relative flex justify-center py-12">
+<div class="pulse-orb absolute w-72 h-72 rounded-full blur-3xl opacity-60"></div>
+<div class="glass-card w-64 h-64 rounded-xl flex flex-col items-center justify-center relative z-10 border-primary/20">
+<span class="text-6xl font-headline font-black text-primary">88</span>
+<span class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mt-2">Mindfulness Index</span>
+<div class="absolute -bottom-4 -right-4 w-24 h-24 glass-card rounded-lg flex flex-col items-center justify-center border-secondary/30 neon-glow-secondary">
+<span class="text-secondary font-headline font-bold text-xl">+12%</span>
+<span class="text-[8px] uppercase tracking-widest text-on-surface-variant">vs Yesterday</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Assessment Bento Grid -->
+<section class="space-y-8">
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<h3 class="text-3xl font-headline font-bold">Daily Mindset</h3>
+<p class="text-on-surface-variant text-sm">Measure your cognitive and emotional baseline.</p>
+</div>
+<button class="text-primary text-sm font-bold flex items-center gap-2 group">
+                    View History <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Assessment Card 1 -->
+<div class="glass-card p-8 rounded-xl space-y-6 group hover:border-primary/40 transition-all">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Cognitive Load</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">A quick 2-minute test to gauge your current focus levels and mental fatigue.</p>
+</div>
+<button class="w-full py-4 rounded-xl bg-surface-container-highest text-on-surface text-sm font-bold group-hover:bg-primary group-hover:text-on-primary transition-all">
+                        Begin Scan
+                    </button>
+</div>
+<!-- Assessment Card 2 -->
+<div class="glass-card p-8 rounded-xl space-y-6 group hover:border-secondary/40 transition-all md:col-span-2 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/10 blur-[60px]"></div>
+<div class="w-12 h-12 rounded-lg bg-secondary-container/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mood</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Emotional Resonance</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed max-w-xs">Our AI analyzes your voice patterns and micro-expressions to identify underlying emotional trends.</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-8 py-4 rounded-xl bg-secondary text-on-secondary text-sm font-bold transition-all">
+                            Start Recording
+                        </button>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest">Encrypted &amp; Private</span>
+</div>
+</div>
+<!-- Assessment Card 3 -->
+<div class="glass-card p-8 rounded-xl space-y-6 group hover:border-tertiary/40 transition-all">
+<div class="w-12 h-12 rounded-lg bg-tertiary-container/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Sleep Quality</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Deep analysis of REM cycles and recovery metrics from last night.</p>
+</div>
+<div class="flex items-end justify-between">
+<span class="text-2xl font-headline font-bold text-tertiary">7h 42m</span>
+<span class="text-xs text-on-surface-variant">Optimum</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Meditation Player Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
+<div class="lg:col-span-8 glass-card p-8 md:p-12 rounded-xl flex flex-col md:flex-row gap-12 items-center relative overflow-hidden border-outline-variant/10">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent pointer-events-none"></div>
+<div class="w-full md:w-1/2 aspect-square rounded-lg overflow-hidden shadow-2xl relative">
+<img class="w-full h-full object-cover" data-alt="Abstract calming liquid waves with neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaU-h6QcY6mcwcRQHgxz4w42hKSeVX19FG2ZqICygYt4B1Ilr8lLbVgwOh2wv3F9pua2OJqRslqmHWhwLcZ4cQ8SggQIiLN88z2BScChswdTvbBOlXFKmryGYTn6zTYlV0m776tnUIfhReW3RXplcjbKq_owRshj_A3QNy8e-Qw2E87o2z5NkowIZdLxXVdoBPI9BYx-1as2b7MypNn5Al76FYZAfSq51FWwXw0WG1nm8VlafAf-oLD3NsEkPhkj0HBVZxkqII2y4f"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[2px]">
+<button class="w-20 h-20 rounded-full bg-white text-black flex items-center justify-center shadow-2xl active:scale-90 duration-300">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="w-full md:w-1/2 space-y-8">
+<div class="space-y-2">
+<span class="text-[10px] text-secondary font-bold uppercase tracking-[0.3em]">Current Session</span>
+<h4 class="text-3xl font-headline font-bold">Neural Desensitization</h4>
+<p class="text-on-surface-variant">15 min • AI-Generated Soundscape</p>
+</div>
+<div class="space-y-4">
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-primary w-1/3 rounded-full"></div>
+</div>
+<div class="flex justify-between text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">
+<span>04:20</span>
+<span>15:00</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-white">shuffle</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-white">skip_previous</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-white">skip_next</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-white">repeat</button>
+</div>
+</div>
+</div>
+<!-- Wellbeing Metrics Sidebar -->
+<div class="lg:col-span-4 space-y-6">
+<div class="glass-card p-6 rounded-xl border-outline-variant/10">
+<h5 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-6">Biometric Sync</h5>
+<div class="space-y-6">
+<div class="flex justify-between items-center">
+<span class="text-sm text-on-surface/80">Heart Rate Variability</span>
+<span class="text-primary font-bold">High (62ms)</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full">
+<div class="h-full bg-primary w-[85%] rounded-full shadow-[0_0_10px_rgba(243,255,202,0.4)]"></div>
+</div>
+<div class="flex justify-between items-center pt-2">
+<span class="text-sm text-on-surface/80">Cortisol Est.</span>
+<span class="text-secondary font-bold">Optimal</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full">
+<div class="h-full bg-secondary w-[30%] rounded-full shadow-[0_0_10px_rgba(0,238,252,0.4)]"></div>
+</div>
+<div class="flex justify-between items-center pt-2">
+<span class="text-sm text-on-surface/80">Breath Consistency</span>
+<span class="text-tertiary font-bold">Stable</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full">
+<div class="h-full bg-tertiary w-[92%] rounded-full shadow-[0_0_10px_rgba(255,107,155,0.4)]"></div>
+</div>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl bg-gradient-to-br from-primary/10 to-transparent border-primary/20">
+<div class="flex gap-4 items-start">
+<div class="p-2 rounded-lg bg-primary text-on-primary">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div class="space-y-2">
+<h6 class="font-bold text-sm">Mindfulness Streak</h6>
+<p class="text-xs text-on-surface-variant">You've completed sessions for 12 days straight. Your focus is up 22% this week.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-8 pb-8 pt-4 bg-[#1a1919]/60 backdrop-blur-lg rounded-t-[3rem] border-t border-white/10 shadow-[0_-8px_32px_rgba(0,238,252,0.06)]">
+<button class="flex items-center justify-center text-[#adaaaa] p-3 hover:text-[#00eefc] transition-colors active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">home</span>
+</button>
+<button class="flex items-center justify-center bg-[#f3ffca] text-[#0e0e0e] rounded-full p-3 shadow-[0_0_15px_rgba(243,255,202,0.5)] active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">insights</span>
+</button>
+<button class="flex items-center justify-center text-[#adaaaa] p-3 hover:text-[#00eefc] transition-colors active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">fitness_center</span>
+</button>
+<button class="flex items-center justify-center text-[#adaaaa] p-3 hover:text-[#00eefc] transition-colors active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">group</span>
+</button>
+<button class="flex items-center justify-center text-[#adaaaa] p-3 hover:text-[#00eefc] transition-colors active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">person</span>
+</button>
+</nav>
+</body></html>
