@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0E0E0E">
+  <meta name="color-scheme" content="dark">
+  <title>Fitup — User Guide</title>
+  <meta name="description" content="Step-by-step guide: how to track activity, log meals, do workouts, monitor mental wellbeing, scan lab reports, and let Fitup build your holistic health plan.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="guide.css">
+</head>
+<body>
+
+  <div class="bg-mesh">
+    <div class="orb orb-cyan"></div>
+    <div class="orb orb-magenta"></div>
+    <div class="orb orb-lime"></div>
+    <div class="orb orb-blue"></div>
+  </div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="grid-overlay"></div>
+
+  <header class="nav">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="assets/logo.png" alt="Fitup logo">
+      <span class="brand-name">fitup</span>
+      <span class="brand-tag">.ai</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#modules">Modules</a>
+      <a href="index.html#ai">AI Coach</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="guide.html" class="active-link">Guide</a>
+      <a href="pitch.html" class="pitch-link">Pitch</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">
+      Launch App <span class="arrow">→</span>
+    </a>
+  </header>
+
+  <main class="guide-main">
+
+    <!-- HERO -->
+    <section class="guide-hero">
+      <div class="g-stamp reveal">USER GUIDE</div>
+      <h1 class="reveal">Everything you can do with <span class="grad-text">Fitup.</span></h1>
+      <p class="g-lede reveal">
+        From your first sign-in to a full holistic AI health plan — in plain English,
+        with step-by-step instructions you can follow in 5 minutes.
+      </p>
+      <div class="g-meta reveal">
+        <span class="g-time">⏱ 5 min read</span>
+        <span class="g-dot">·</span>
+        <span>Updated for v1.0</span>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="guide-toc reveal">
+      <div class="toc-head">JUMP TO</div>
+      <div class="toc-grid">
+        <a href="#start"><span class="toc-num">00</span>Getting Started</a>
+        <a href="#activity"><span class="toc-num">01</span>Track Activity</a>
+        <a href="#diet"><span class="toc-num">02</span>Log Diet &amp; Water</a>
+        <a href="#workout"><span class="toc-num">03</span>Do a Workout</a>
+        <a href="#health"><span class="toc-num">04</span>Upload Lab Reports</a>
+        <a href="#mental"><span class="toc-num">05</span>Mental Wellbeing</a>
+        <a href="#plan"><span class="toc-num">06</span>Get a Holistic AI Plan</a>
+        <a href="#fitcoins"><span class="toc-num">07</span>Earn &amp; Use Fitcoins</a>
+      </div>
+    </section>
+
+    <!-- 00 GETTING STARTED -->
+    <section id="start" class="guide-section">
+      <div class="gs-head">
+        <div class="gs-num">00</div>
+        <div>
+          <div class="gs-eyebrow">FIRST 60 SECONDS</div>
+          <h2>Getting Started</h2>
+        </div>
+      </div>
+      <p class="gs-intro">Open <a href="https://fitup-f5f56.web.app" target="_blank" rel="noopener" class="link">fitup-f5f56.web.app</a> on web, or install the Android app. Sign in with Google in one tap — no forms, no card.</p>
+
+      <div class="steps-row">
+        <div class="step-card reveal">
+          <div class="sc-num">1</div>
+          <h3>Sign in with Google</h3>
+          <p>Single click. We create your profile and prep your modules. Your data is encrypted at rest.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="sc-num">2</div>
+          <h3>Quick onboarding</h3>
+          <p>Age, gender, weight, goal, and lifestyle preferences. Takes about 90 seconds.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="sc-num">3</div>
+          <h3>Land on Home</h3>
+          <p>You'll see six glass cards — one per module. Numbers populate as you log.</p>
+        </div>
+      </div>
+
+      <div class="tip reveal">
+        <div class="tip-tag">💡 PRO TIP</div>
+        <div>Set up your profile (weight, goal, diet preferences) before anything else — every AI insight is personalized using it.</div>
+      </div>
+    </section>
+
+    <!-- 01 ACTIVITY -->
+    <section id="activity" class="guide-section">
+      <div class="gs-head">
+        <div class="gs-num gs-num-cyan">01</div>
+        <div>
+          <div class="gs-eyebrow">MODULE · ACTIVITY</div>
+          <h2>Track Activity</h2>
+        </div>
+      </div>
+      <p class="gs-intro">Capture every step, run, walk, jog, or cycle — with GPS map, live pace, and calorie burn. Sleep tracking included.</p>
+
+      <div class="how-grid">
+        <div class="how-text reveal">
+          <h3>Live activity logging (mobile)</h3>
+          <ol class="steps-list">
+            <li>Tap <strong>Activity</strong> from the sidebar or home card.</li>
+            <li>Hit the big <strong>+</strong> button → choose <em>Run</em>, <em>Walk</em>, <em>Jog</em>, or <em>Cycle</em>.</li>
+            <li>Permission prompt for location → tap <strong>Allow</strong>.</li>
+            <li>Tap <strong>Start</strong> — your route, pace, distance, and calories track live with a map underneath.</li>
+            <li>Tap <strong>Finish</strong> when done. You'll see the summary card with the route map, total stats, and earned Fitcoins.</li>
+          </ol>
+
+          <h3 class="h-sub">Daily / weekly view (any platform)</h3>
+          <p>The Activity page shows today's steps + calories + distance, your weekly trend, and a list of recent sessions. Tap any session to open its summary with the route.</p>
+
+          <h3 class="h-sub">Sleep</h3>
+          <p>From the Activity page, tap <strong>Log Sleep</strong> to enter bedtime + wake time. The AI uses this to read recovery and adjust workout intensity.</p>
+
+          <div class="callout callout-info">
+            <strong>Web users:</strong> live GPS isn't available — but everything you log on mobile syncs in instantly. Recent activity summary, sleep log, and AI insights all work on web.
+          </div>
+        </div>
+
+        <div class="how-art reveal">
+          <div class="mock-screen">
+            <div class="ms-head">
+              <div class="ms-back">←</div>
+              <div class="ms-title">Activity</div>
+            </div>
+            <div class="ms-body">
+              <div class="act-ring">
+                <svg viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="42" stroke="rgba(255,255,255,0.06)" stroke-width="6" fill="none"/>
+                  <circle cx="50" cy="50" r="42" stroke="url(#agG)" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="264" stroke-dashoffset="80" transform="rotate(-90 50 50)"/>
+                  <defs><linearGradient id="agG"><stop offset="0" stop-color="#00E5FF"/><stop offset="1" stop-color="#3D5AFE"/></linearGradient></defs>
+                </svg>
+                <div class="ar-inner">
+                  <div class="ar-num">8,420</div>
+                  <div class="ar-lbl">/ 10,000 STEPS</div>
+                </div>
+              </div>
+              <div class="act-grid">
+                <div class="act-tile"><div class="ats-l">DIST</div><div class="ats-v">6.2 km</div></div>
+                <div class="act-tile"><div class="ats-l">CAL</div><div class="ats-v">421</div></div>
+                <div class="act-tile"><div class="ats-l">SLEEP</div><div class="ats-v">7h 28m</div></div>
+              </div>
+              <button class="ms-fab">+ Start Activity</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 DIET -->
+    <section id="diet" class="guide-section">
+      <div class="gs-head">
+        <div class="gs-num gs-num-lime">02</div>
+        <div>
+          <div class="gs-eyebrow">MODULE · DIET</div>
+          <h2>Log Diet &amp; Water</h2>
+        </div>
+      </div>
+      <p class="gs-intro">Three ways to log a meal — pick the fastest one. Global and Indian cuisine, plus packaged food.</p>
+
+      <div class="how-grid">
+        <div class="how-text reveal">
+          <h3>Log a meal</h3>
+          <ol class="steps-list">
+            <li>Open <strong>Diet</strong>. You'll see today's calorie ring and meal slots (Breakfast, Lunch, Dinner, Snacks).</li>
+            <li>Tap a meal slot or the <strong>+ Log Meal</strong> button.</li>
+            <li>Choose your method:
+              <ul class="sub-list">
+                <li><strong>Search</strong> — type "rajma chawal" or "chicken caesar", pick portion.</li>
+                <li><strong>Photo</strong> — snap a picture; AI identifies the dish and macros.</li>
+                <li><strong>Barcode</strong> — scan packaged food.</li>
+              </ul>
+            </li>
+            <li>Tap <strong>Save</strong>. The calorie ring and macro bars update immediately.</li>
+          </ol>
+
+          <h3 class="h-sub">Water logging</h3>
+          <p>Tap the water glass on the Diet page. Use <strong>+ / −</strong> to adjust glasses. The bar fills toward your daily goal.</p>
+
+          <h3 class="h-sub">Edit anything</h3>
+          <p>Tap any saved meal slot to see the <strong>Edit</strong> pill — change portions, add items, or remove anything. All meals saved that day come up pre-filled.</p>
+
+          <div class="callout callout-tip">
+            <strong>💡 Power move:</strong> Tap <strong>Diet AI</strong> at the top to ask "what should I eat for dinner tonight?" — the AI uses your activity, vitals, and remaining macros to answer.
+          </div>
+        </div>
+
+        <div class="how-art reveal">
+          <div class="mock-screen">
+            <div class="ms-head">
+              <div class="ms-back">←</div>
+              <div class="ms-title">Diet</div>
+            </div>
+            <div class="ms-body">
+              <div class="diet-ring">
+                <div class="dr-num">1,420</div>
+                <div class="dr-lbl">/ 2000 KCAL · 71%</div>
+              </div>
+              <div class="macros-row">
+                <div class="mr"><div class="mr-l">P</div><div class="mr-bar"><span style="width:60%"></span></div><div class="mr-v">84g</div></div>
+                <div class="mr"><div class="mr-l">C</div><div class="mr-bar"><span style="width:72%;background:linear-gradient(90deg,var(--lime),var(--cyan))"></span></div><div class="mr-v">162g</div></div>
+                <div class="mr"><div class="mr-l">F</div><div class="mr-bar"><span style="width:54%;background:linear-gradient(90deg,var(--magenta),var(--blue))"></span></div><div class="mr-v">48g</div></div>
+              </div>
+              <div class="slot">
+                <div class="slot-l"><span>🍳</span>Breakfast</div>
+                <div class="slot-v">320 kcal</div>
+                <div class="slot-pill">EDIT</div>
+              </div>
+              <div class="slot slot-empty">
+                <div class="slot-l"><span>🥗</span>Lunch</div>
+                <div class="slot-v">Tap to log</div>
+              </div>
+              <button class="ms-fab">+ Log Meal</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 WORKOUT -->
+    <section id="workout" class="guide-section">
+      <div class="gs-head">
+        <div class="gs-num gs-num-magenta">03</div>
+        <div>
+          <div class="gs-eyebrow">MODULE · WORKOUT</div>
+          <h2>Do a Workout</h2>
+        </div>
+      </div>
+      <p class="gs-intro">AI-built strength + cardio plans tuned to your equipment and goals. Each exercise has video guidance.</p>
+
+      <div class="how-grid">
+        <div class="how-text reveal">
+          <h3>Generate your first plan</h3>
+          <ol class="steps-list">
+            <li>Open <strong>Workout</strong>. Tap <strong>Generate Plan</strong>.</li>
+            <li>Pick your <em>goal</em> — fat loss, muscle gain, endurance, or general fitness.</li>
+            <li>Select <em>level</em> — beginner, intermediate, expert.</li>
+            <li>Pick <em>environment</em> — home, gym, outdoor.</li>
+            <li>Tick what <em>equipment</em> you have access to.</li>
+            <li>Tap <strong>Build my plan</strong>. AI returns a weekly schedule.</li>
+          </ol>
+
+          <h3 class="h-sub">Do a session</h3>
+          <ol class="steps-list">
+            <li>Tap today's session card on the Workout page.</li>
+            <li>You'll see the exercise list with sets/reps and a <strong>video preview</strong> on each.</li>
+            <li>Tap any exercise → log the actual sets/reps/weight as you do them.</li>
+            <li>When done, tap <strong>Finish Session</strong> — calorie burn, time, and Fitcoins drop in.</li>
+          </ol>
+
+          <div class="callout callout-info">
+            The plan <strong>adapts weekly</strong> based on how you actually trained, slept, and ate. Skipped Monday's session? AI rebalances the rest of the week.
+          </div>
+        </div>
+
+        <div class="how-art reveal">
+          <div class="mock-screen">
+            <div class="ms-head">
+              <div class="ms-back">←</div>
+              <div class="ms-title">Workout</div>
+            </div>
+            <div class="ms-body">
+              <div class="wo-week">
+                <div class="wo-pill wo-done"><span>MON</span><div>Push · 4</div><div class="wp">DONE</div></div>
+                <div class="wo-pill wo-now"><span>TUE</span><div>Pull · 5</div><div class="wp wp-now">TODAY</div></div>
+                <div class="wo-pill"><span>THU</span><div>Legs · 4</div><div class="wp">UP NEXT</div></div>
+                <div class="wo-pill wo-rest"><span>WED</span><div>Rest day</div><div class="wp">REST</div></div>
+              </div>
+              <div class="wo-card">
+                <div class="wo-name">Pull Day</div>
+                <div class="wo-meta">5 exercises · ~45 min</div>
+                <div class="wo-exes">
+                  <div class="ex">▶ Lat pulldown · 4×10</div>
+                  <div class="ex">▶ Barbell row · 4×8</div>
+                  <div class="ex">▶ Face pull · 3×12</div>
+                </div>
+              </div>
+              <button class="ms-fab">Start Session</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 HEALTH -->
+    <section id="health" class="guide-section">
+      <div class="gs-head">
+        <div class="gs-num gs-num-cyan">04</div>
+        <div>
+          <div class="gs-eyebrow">MODULE · HEALTH &amp; VITALS</div>
+          <h2>Upload Lab Reports</h2>
+        </div>
+      </div>
+      <p class="gs-intro">Snap your blood test PDF or image — the AI extracts every vital, fills in the trends, and flags what needs attention.</p>
+
+      <div class="how-grid">
+        <div class="how-text reveal">
+          <h3>Lab report scan — 4 taps</h3>
+          <ol class="steps-list">
+            <li>Open <strong>Health &amp; Vitals</strong>. Tap <strong>Scan Lab Report</strong>.</li>
+            <li>Pick a <strong>PDF</strong> or take a <strong>photo</strong> of the report.</li>
+            <li>Tap <strong>AI Detect</strong> — the AI extracts vitals like HbA1c, Cholesterol, Vitamin D, Uric Acid, Liver, Thyroid (20+ types). Review the list — uncheck anything wrong.</li>
+            <li>Tap <strong>Save Data</strong>. Every vital lands on the Health page with a status dot (good / moderate / needs attention).</li>
+          </ol>
+
+          <h3 class="h-sub">Log a vital manually</h3>
+          <p>Tap the <strong>+ Log Vital</strong> button on Health page. Pick the vital, enter the number + unit. Done.</p>
+
+          <h3 class="h-sub">See trends</h3>
+          <p>Tap any vital tile to open its trend chart over time. The AI insight below explains <em>why</em> a number is changing and what to do about it.</p>
+
+          <h3 class="h-sub">Connected devices</h3>
+          <p>On mobile, Fitup reads vitals from <strong>Health Connect (Android)</strong> or <strong>HealthKit (iOS)</strong> — heart rate, blood oxygen, more — automatically.</p>
+
+          <div class="callout callout-warn">
+            <strong>⚠️ Not medical advice.</strong> The AI suggests with words like "consider" or "you may want to". For diagnosis or treatment, talk to a doctor.
+          </div>
+        </div>
+
+        <div class="how-art reveal">
+          <div class="mock-screen">
+            <div class="ms-head">
+              <div class="ms-back">←</div>
+              <div class="ms-title">Health &amp; Vitals</div>
+            </div>
+            <div class="ms-body">
+              <div class="vital-tile vt-good">
+                <div class="vt-name">HbA1c</div>
+                <div class="vt-val">5.1<span>%</span></div>
+                <div class="vt-trend">↘ -0.3</div>
+              </div>
+              <div class="vital-tile vt-good">
+                <div class="vt-name">Blood Pressure</div>
+                <div class="vt-val">122/78</div>
+                <div class="vt-trend">→ stable</div>
+              </div>
+              <div class="vital-tile vt-warn">
+                <div class="vt-name">Vitamin D</div>
+                <div class="vt-val">22<span>ng/mL</span></div>
+                <div class="vt-trend">↘ low</div>
+              </div>
+              <button class="ms-fab">📄 Scan Lab Report</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 MENTAL -->
+    <section id="mental" class="guide-section">
+      <div class="gs-head">
+        <div class="gs-num gs-num-magenta">05</div>
+        <div>
+          <div class="gs-eyebrow">MODULE · MENTAL WELLBEING</div>
+          <h2>Mental Wellbeing</h2>
+        </div>
+      </div>
+      <p class="gs-intro">Mood tracking, stress surveys, guided meditation, and breathing exercises — all with weekly AI insight.</p>
+
+      <div class="how-grid">
+        <div class="how-text reveal">
+          <h3>Daily mood check-in</h3>
+          <ol class="steps-list">
+            <li>Open <strong>Mental Wellbeing</strong>. The mood emoji row is at the top.</li>
+            <li>Tap the emoji that matches how you feel right now.</li>
+            <li>(Optional) Add a one-line note — what's going on.</li>
+            <li>That's it. The weekly mood graph updates.</li>
+          </ol>
+
+          <h3 class="h-sub">Weekly stress survey</h3>
+          <p>Every Sunday, you'll get a quick 6-question survey. Answers feed into your stress score, which the AI cross-references against sleep, activity, and vitals.</p>
+
+          <h3 class="h-sub">Meditation &amp; breathing</h3>
+          <ol class="steps-list">
+            <li>Tap <strong>Meditate</strong> on the Mental page.</li>
+            <li>Pick a sound (rain, ocean, white noise…) and duration (5 / 10 / 15 / 20 min).</li>
+            <li>Tap <strong>Start</strong>. Or pick <strong>Breathing</strong> for a 4-7-8 guided exercise.</li>
+          </ol>
+
+          <div class="callout callout-info">
+            The <strong>weekly insight</strong> ties everything together — e.g. "Your best mood days followed walks after 7pm. Want me to build that into your plan?"
+          </div>
+        </div>
+
+        <div class="how-art reveal">
+          <div class="mock-screen">
+            <div class="ms-head">
+              <div class="ms-back">←</div>
+              <div class="ms-title">Mental Wellbeing</div>
+            </div>
+            <div class="ms-body">
+              <div class="mood-emojis">
+                <span>😣</span><span>😐</span><span class="me-sel">🙂</span><span>😄</span><span>🤩</span>
+              </div>
+              <div class="mood-week">
+                <div class="mw"><div class="mw-bar" style="height:55%"></div><div>M</div></div>
+                <div class="mw"><div class="mw-bar" style="height:70%"></div><div>T</div></div>
+                <div class="mw"><div class="mw-bar" style="height:50%"></div><div>W</div></div>
+                <div class="mw"><div class="mw-bar" style="height:85%"></div><div>T</div></div>
+                <div class="mw"><div class="mw-bar" style="height:90%"></div><div>F</div></div>
+                <div class="mw"><div class="mw-bar" style="height:78%"></div><div>S</div></div>
+                <div class="mw"><div class="mw-bar" style="height:88%"></div><div>S</div></div>
+              </div>
+              <div class="med-row">
+                <div class="med-tile">🧘 Meditate</div>
+                <div class="med-tile">🌬️ Breathe</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 HOLISTIC PLAN -->
+    <section id="plan" class="guide-section guide-section-special">
+      <div class="gs-head">
+        <div class="gs-num gs-num-grad">06</div>
+        <div>
+          <div class="gs-eyebrow">THE BIG ONE</div>
+          <h2>Get a <span class="grad-text">Holistic AI</span> Health Plan</h2>
+        </div>
+      </div>
+      <p class="gs-intro">This is where Fitup pulls everything together. One plan — activity + diet + workout + recovery — that knows your vitals, mood, and goals.</p>
+
+      <div class="plan-flow">
+        <div class="pf-step reveal">
+          <div class="pf-num">①</div>
+          <h3>Open Home → Holistic Plan</h3>
+          <p>On the Home page, scroll to the <strong>Holistic Plan</strong> card. If you don't have an active plan yet, tap <strong>Generate Plan</strong>.</p>
+        </div>
+        <div class="pf-step reveal">
+          <div class="pf-num">②</div>
+          <h3>Tell the AI about your life</h3>
+          <p>Quick multi-step form:</p>
+          <ul class="sub-list">
+            <li>Which modules you want included (activity, diet, workout, mental…)</li>
+            <li>Availability — low / medium / high time per week</li>
+            <li>Intensity preference — easy / balanced / push</li>
+            <li>Start date and goal target</li>
+            <li>Any specific intents ("lose 5 kg", "lower cholesterol", "sleep better")</li>
+          </ul>
+        </div>
+        <div class="pf-step reveal">
+          <div class="pf-num">③</div>
+          <h3>AI reads your full picture</h3>
+          <p>It pulls your latest <strong>vitals</strong>, recent <strong>activity</strong>, eating patterns, sleep, mood and stress, and your <strong>goal</strong> — then generates a connected plan in 5–10 seconds.</p>
+        </div>
+        <div class="pf-step reveal">
+          <div class="pf-num">④</div>
+          <h3>Your plan, broken into 4 lanes</h3>
+          <div class="lanes">
+            <div class="lane lane-cyan"><strong>Activity</strong><div>Step targets, weekly walks/runs/cycles</div></div>
+            <div class="lane lane-lime"><strong>Diet</strong><div>Daily calorie/macro/water targets aligned to your activity</div></div>
+            <div class="lane lane-magenta"><strong>Workout</strong><div>Weekly strength / cardio split tuned to recovery</div></div>
+            <div class="lane lane-blue"><strong>Recovery</strong><div>Sleep window, mindfulness, breathing cadence</div></div>
+          </div>
+        </div>
+        <div class="pf-step reveal">
+          <div class="pf-num">⑤</div>
+          <h3>Track and adjust</h3>
+          <p>Every module's page shows how it's tracking against the plan. The AI re-reads weekly and can <strong>amend</strong> the plan if your reality shifts — illness, travel, missed sessions, new lab results.</p>
+        </div>
+        <div class="pf-step reveal">
+          <div class="pf-num">⑥</div>
+          <h3>Ask the coach anything</h3>
+          <p>Tap any module's <strong>AI button</strong> — Move AI, Diet AI, Burn AI, Health AI, Wellbeing AI — to ask specific questions like "should I run today?" or "is my Vitamin D bad?".</p>
+        </div>
+      </div>
+
+      <div class="example-strong reveal">
+        <div class="es-tag">REAL EXAMPLE OF HOLISTIC AI</div>
+        <div class="es-body">
+          You upload a lab report showing <strong>high uric acid</strong>. You've been running 15 km/day. Your sleep is averaging 5h. A normal app would let it continue.
+          <br><br>
+          <strong>Fitup's coach</strong> reads all three — your <em>lab</em>, your <em>activity</em>, your <em>sleep</em> — and flags the conflict immediately. It pulls back the running target, swaps in low-impact mobility, raises your water goal, adjusts your dinner toward purine-low foods, and pushes your bedtime earlier. One adjustment across 4 modules in one tap.
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 FITCOINS -->
+    <section id="fitcoins" class="guide-section">
+      <div class="gs-head">
+        <div class="gs-num gs-num-lime">07</div>
+        <div>
+          <div class="gs-eyebrow">REWARDS</div>
+          <h2>Earn &amp; Use Fitcoins</h2>
+        </div>
+      </div>
+      <p class="gs-intro">Build healthy habits, earn Fitcoins. Spend them on perks or partner products.</p>
+
+      <div class="fc-grid">
+        <div class="fc-card reveal"><div class="fc-icon">🏃</div><h4>Log a run / walk / cycle</h4><div class="fc-amt">+ 50 FC</div></div>
+        <div class="fc-card reveal"><div class="fc-icon">🍽️</div><h4>Log all 3 meals + water goal</h4><div class="fc-amt">+ 40 FC</div></div>
+        <div class="fc-card reveal"><div class="fc-icon">💪</div><h4>Complete a workout</h4><div class="fc-amt">+ 60 FC</div></div>
+        <div class="fc-card reveal"><div class="fc-icon">🧘</div><h4>Meditate / log mood</h4><div class="fc-amt">+ 20 FC</div></div>
+        <div class="fc-card reveal"><div class="fc-icon">🔥</div><h4>7-day streak</h4><div class="fc-amt">+ 200 FC</div></div>
+        <div class="fc-card reveal"><div class="fc-icon">🏆</div><h4>Win a community challenge</h4><div class="fc-amt">+ 500 FC</div></div>
+      </div>
+
+      <p class="fc-foot">Coming soon: <strong>Fitcoin Shop</strong> — partner brands let you redeem coins for healthy products and perks.</p>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta reveal">
+      <div class="cta-inner">
+        <div class="cta-spark">✦</div>
+        <h2>Ready to start?</h2>
+        <p>Open Fitup in the browser. Set up takes 90 seconds.</p>
+        <a class="btn btn-primary btn-xl" href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">
+          Launch Fitup Free <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-row">
+      <div class="brand">
+        <img class="brand-mark" src="assets/logo.png" alt="Fitup logo">
+        <span class="brand-name">fitup</span>
+        <span class="brand-tag">.ai</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="guide.html">Guide</a>
+        <a href="pitch.html">Pitch</a>
+        <a href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">Web App</a>
+      </div>
+    </div>
+    <div class="footer-fine">© <span id="year"></span> Sumeet Gupta · Holistic Health AI</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
