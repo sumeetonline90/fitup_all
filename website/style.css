@@ -196,6 +196,17 @@ main { position: relative; z-index: 2; }
   color: var(--muted);
 }
 .nav-links a:hover { color: var(--text); }
+.nav-links a.pitch-link {
+  color: var(--cyan);
+  padding: 4px 12px;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 999px;
+  background: rgba(0, 229, 255, 0.06);
+}
+.nav-links a.pitch-link:hover {
+  background: rgba(0, 229, 255, 0.14);
+  border-color: rgba(0, 229, 255, 0.5);
+}
 
 /* ============================================
    BUTTONS

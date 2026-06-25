@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0E0E0E">
+  <meta name="color-scheme" content="dark">
+  <title>Fitup — The Pitch</title>
+  <meta name="description" content="One app. One AI. One routine that actually works together. The Fitup investor pitch.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pitch.css">
+</head>
+<body>
+
+  <div class="bg-mesh">
+    <div class="orb orb-cyan"></div>
+    <div class="orb orb-magenta"></div>
+    <div class="orb orb-lime"></div>
+    <div class="orb orb-blue"></div>
+  </div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="grid-overlay"></div>
+
+  <header class="nav">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="assets/logo.png" alt="Fitup logo">
+      <span class="brand-name">fitup</span>
+      <span class="brand-tag">.ai</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#modules">Modules</a>
+      <a href="index.html#ai">AI Coach</a>
+      <a href="index.html#partners">Partners</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="pitch.html" class="active">Pitch</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">
+      Launch App <span class="arrow">→</span>
+    </a>
+  </header>
+
+  <main>
+
+    <!-- HERO / FOUNDER STORY -->
+    <section class="pitch-hero">
+      <div class="ph-stamp reveal">FOUNDER'S STORY</div>
+      <h1 class="reveal">
+        <span class="grad-text">265 lbs.</span><br>
+        High cholesterol.<br>
+        High uric acid.
+      </h1>
+      <p class="ph-lede reveal">
+        Two years ago, that was me. That journey is why I built Fitup —
+        an AI that reads your whole health picture and turns it into
+        <strong>one personalized routine</strong>, replacing the five
+        disconnected apps everyone's stuck juggling.
+      </p>
+      <div class="ph-tag reveal">One app · One AI · One routine that actually works together.</div>
+
+      <div class="weight-arc reveal">
+        <div class="wa-pill wa-before">
+          <div class="wa-num">265<span> lbs</span></div>
+          <div class="wa-lbl">2024 · Pre-Fitup</div>
+        </div>
+        <svg class="wa-line" viewBox="0 0 400 60" preserveAspectRatio="none">
+          <path d="M 20 30 Q 200 -10 380 30" stroke="url(#waG)" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+          <defs><linearGradient id="waG"><stop offset="0" stop-color="#FF006E"/><stop offset="1" stop-color="#00E5FF"/></linearGradient></defs>
+        </svg>
+        <div class="wa-pill wa-after">
+          <div class="wa-num">198<span> lbs</span></div>
+          <div class="wa-lbl">2026 · Today</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE PROBLEM -->
+    <section class="section pitch-section">
+      <div class="ps-label reveal">THE PROBLEM</div>
+      <h2 class="reveal"><span class="grad-text">Fragmentation</span> Fatigue.</h2>
+      <p class="ps-sub reveal">At 265 lbs, I needed three things working together. My apps refused to.</p>
+
+      <div class="problem-grid">
+        <div class="prob-card reveal">
+          <div class="prob-icon">🏝️</div>
+          <h3>Siloed by design</h3>
+          <p>Strava for runs. HealthifyMe for diet. A workout app. A labs app. A meditation app. Each living in its own world.</p>
+        </div>
+        <div class="prob-card reveal">
+          <div class="prob-icon">📊</div>
+          <h3>Numbers without answers</h3>
+          <p>Five apps. Each giving a number. None giving an answer. Working hard. Flying blind.</p>
+        </div>
+        <div class="prob-card prob-card-wide reveal">
+          <div class="prob-icon">🧭</div>
+          <h3>Data everywhere · insight nowhere</h3>
+          <p>That's fragmentation fatigue — and it's what every health-conscious person is living with right now.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE SOLUTION -->
+    <section class="section pitch-section">
+      <div class="ps-label reveal">THE SOLUTION</div>
+      <h2 class="reveal">One App, One AI — <span class="grad-text">My Proof.</span></h2>
+      <p class="ps-sub reveal">Fitup turned scattered data into a routine that changed my life — and it can do the same for millions.</p>
+
+      <div class="solution-grid">
+        <div class="sol-card reveal">
+          <div class="sol-icon">🧪</div>
+          <div class="sol-flow">
+            <div class="sol-step">Lab Report</div>
+            <div class="sol-arrow">→</div>
+            <div class="sol-step">Instant Plan</div>
+          </div>
+          <p>Upload a lab report. AI scans 20+ vitals. Returns a connected diet, workout, and activity plan built around your numbers.</p>
+        </div>
+        <div class="sol-card reveal">
+          <div class="sol-icon">🧠</div>
+          <h3>Cross-Module Reasoning</h3>
+          <p>Flags conflicts no single app can see — like over-training while under-sleeping. The AI sees your whole day.</p>
+        </div>
+        <div class="sol-card reveal">
+          <div class="sol-icon">🏆</div>
+          <h3>Community Motivation</h3>
+          <p>Head-to-head user challenges keep you accountable and engaged. Streaks, leaderboards, Fitcoins.</p>
+        </div>
+        <div class="sol-card sol-card-proof reveal">
+          <div class="proof-tag">FOUNDER PROOF</div>
+          <div class="proof-arc">
+            <div class="proof-num"><span>265</span> → <span class="grad-text">198 lbs</span></div>
+            <div class="proof-foot">Cholesterol down. Uric acid almost normal. That's me, standing here.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMERS & VALIDATION -->
+    <section class="section pitch-section">
+      <div class="ps-label reveal">CUSTOMERS &amp; VALIDATION</div>
+      <h2 class="reveal">Built for <span class="grad-text">India's Health-Conscious.</span></h2>
+      <p class="ps-sub reveal">Validated early. Built for the people who need it most.</p>
+
+      <div class="audience-grid">
+        <div class="aud-card reveal">
+          <div class="aud-tag">PRIMARY</div>
+          <h3>Urban professionals · 25–45</h3>
+          <p>Middle to upper-middle class earning ~$10K–$36K/year — already paying for 2–3 health apps that don't connect.</p>
+        </div>
+        <div class="aud-card reveal">
+          <div class="aud-tag aud-tag-warm">HIGH WTP</div>
+          <h3>Adults · 35–55</h3>
+          <p>Managing diabetes, thyroid, and cholesterol — happy to pay $3–$5/month for one app that actually works.</p>
+        </div>
+        <div class="aud-card reveal">
+          <div class="aud-tag aud-tag-lime">VALIDATION</div>
+          <h3>Closed beta · IIT Bombay + ISB</h3>
+          <p>Closed beta with testers from IIT Bombay and ISB networks. Pre-launch waitlist actively building.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKET -->
+    <section class="section pitch-section">
+      <div class="ps-label reveal">MARKET OPPORTUNITY</div>
+      <h2 class="reveal">A <span class="grad-text">Billion-Dollar Market</span> Growing ~20% / Year.</h2>
+
+      <div class="market-grid">
+        <div class="market-card reveal">
+          <div class="m-num">$436M</div>
+          <div class="m-name">India Fitness Apps · 2024</div>
+          <div class="m-detail">Growing to <strong>$2.4B by 2033</strong> at 19.5% CAGR</div>
+          <div class="m-bar"><div class="m-bar-fill" style="--w: 22%;"></div></div>
+        </div>
+        <div class="market-card reveal">
+          <div class="m-num">$4.1B</div>
+          <div class="m-name">India Digital Wellbeing · 2025</div>
+          <div class="m-detail">Total digital fitness and wellbeing market</div>
+          <div class="m-bar"><div class="m-bar-fill" style="--w: 78%;"></div></div>
+        </div>
+        <div class="market-card reveal">
+          <div class="m-num">50M</div>
+          <div class="m-name">Serviceable Users</div>
+          <div class="m-detail">35–50M users across three segments · <strong>850M+ smartphones</strong></div>
+          <div class="m-bar"><div class="m-bar-fill" style="--w: 100%;"></div></div>
+        </div>
+      </div>
+      <p class="ps-foot reveal">India first — then the US and EU, the world's highest-value digital-health markets. Only ~10% penetrated today.</p>
+    </section>
+
+    <!-- COMPETITION -->
+    <section class="section pitch-section">
+      <div class="ps-label reveal">COMPETITIVE LANDSCAPE</div>
+      <h2 class="reveal">Everyone Tracks. <span class="grad-text">Nobody Thinks.</span></h2>
+      <p class="ps-sub reveal">They're tracking apps. Fitup is an AI that <em>acts</em>.</p>
+
+      <div class="comp-wrap reveal">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Competitor</th>
+              <th>Coverage</th>
+              <th>Cross-Module AI</th>
+              <th>Localized</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HealthifyMe</td>
+              <td>Diet-led</td>
+              <td class="cell-mid">Partial</td>
+              <td class="cell-yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Strava</td>
+              <td>Activity only</td>
+              <td class="cell-no">No</td>
+              <td class="cell-no">No</td>
+            </tr>
+            <tr>
+              <td>MyFitnessPal</td>
+              <td>Diet only</td>
+              <td class="cell-no">No</td>
+              <td class="cell-no">No</td>
+            </tr>
+            <tr>
+              <td>Cult.fit</td>
+              <td>Workout / gym</td>
+              <td class="cell-no">No</td>
+              <td class="cell-yes">Yes</td>
+            </tr>
+            <tr class="row-us">
+              <td><strong>Fitup</strong></td>
+              <td>All 5 verticals</td>
+              <td class="cell-yes">Yes — core</td>
+              <td class="cell-yes">Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="moat reveal">
+        <div class="moat-tag">OUR MOAT</div>
+        <p>Cross-module AI that reasons across verticals and tells you what to actually do. It compounds — all 5 verticals log more.</p>
+      </div>
+    </section>
+
+    <!-- BUSINESS MODEL -->
+    <section class="section pitch-section">
+      <div class="ps-label reveal">BUSINESS MODEL</div>
+      <h2 class="reveal">Five Ways to Monetize <span class="grad-text">One Engaged User.</span></h2>
+      <p class="ps-sub reveal">All figures in USD. <strong>Cash-flow positive by end of Year 1.</strong></p>
+
+      <div class="biz-grid">
+        <div class="biz-card reveal">
+          <div class="biz-num">01</div>
+          <h3>B2B Corporate Wellness</h3>
+          <div class="biz-price">~$1.50 – $2.50</div>
+          <p>Per employee / month, bulk licensing.</p>
+        </div>
+        <div class="biz-card reveal">
+          <div class="biz-num">02</div>
+          <h3>Freemium Pro Subscriptions</h3>
+          <div class="biz-price">$3 – $5 / mo</div>
+          <p>Unlocks map view, deeper AI, higher limits.</p>
+        </div>
+        <div class="biz-card reveal">
+          <div class="biz-num">03</div>
+          <h3>Marketplace Commission</h3>
+          <div class="biz-price">15 – 20%</div>
+          <p>On nutritionist, doctor, trainer, coach consults.</p>
+        </div>
+        <div class="biz-card reveal">
+          <div class="biz-num">04</div>
+          <h3>Ads + Fitcoins Rewards</h3>
+          <div class="biz-price">Engagement</div>
+          <p>Ad revenue + loyalty rewards ecosystem.</p>
+        </div>
+        <div class="biz-card biz-card-wide reveal">
+          <div class="biz-num">05</div>
+          <h3>OEM &amp; Wearables (at scale)</h3>
+          <div class="biz-price">Partnership Deals</div>
+          <p>Wearable / device OEM partnerships once user base scales.</p>
+        </div>
+      </div>
+      <div class="biz-foot reveal">
+        <div class="bf-stat"><strong>50K MAU</strong> at 5% conversion</div>
+        <div class="bf-arrow">→</div>
+        <div class="bf-stat bf-stat-win">Cash-flow positive by end of Year 1</div>
+      </div>
+    </section>
+
+    <!-- GTM -->
+    <section class="section pitch-section">
+      <div class="ps-label reveal">GO-TO-MARKET</div>
+      <h2 class="reveal">B2B-First: <span class="grad-text">Our Unfair Advantage.</span></h2>
+      <p class="ps-sub reveal">Innoval's <strong>400+ corporate clients</strong> give us a running start. (<a href="http://www.ivldsp.com" target="_blank" rel="noopener" style="color:var(--cyan)">ivldsp.com</a>)</p>
+
+      <div class="gtm-steps">
+        <div class="gtm-step reveal">
+          <div class="gtm-num">STEP 1</div>
+          <div class="gtm-tag gtm-tag-b2b">B2B</div>
+          <h3>Launch via 400+ enterprise clients</h3>
+          <p>Corporate wellness. High-quality users, rich data, zero consumer spend.</p>
+        </div>
+        <div class="gtm-step reveal">
+          <div class="gtm-num">STEP 2</div>
+          <div class="gtm-tag gtm-tag-b2c">B2C</div>
+          <h3>Open to consumers</h3>
+          <p>Kept sticky by community events and head-to-head user challenges.</p>
+        </div>
+        <div class="gtm-step reveal">
+          <div class="gtm-num">STEP 3</div>
+          <div class="gtm-tag gtm-tag-mkt">MARKETPLACE</div>
+          <h3>Open to experts + OEM</h3>
+          <p>At scale, open to doctors, nutritionists, trainers. Add wearable / device OEM partnerships.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVESTMENT -->
+    <section class="section pitch-section">
+      <div class="ps-label reveal">INVESTMENT</div>
+      <h2 class="reveal">Raising <span class="grad-text">$250K – $500K</span> to Win India First.</h2>
+      <p class="ps-sub reveal">Then the US and EU. Capital efficiency already proven — not promised.</p>
+
+      <div class="invest-grid">
+        <div class="invest-card reveal">
+          <div class="i-tag">PROOF</div>
+          <h3>Built for under $12K</h3>
+          <p>Launched a full AI health platform for less than $12K. We know how to do more with less.</p>
+        </div>
+        <div class="invest-card reveal">
+          <div class="i-tag i-tag-cyan">USE OF FUNDS</div>
+          <h3>Where the capital goes</h3>
+          <p>User acquisition · senior engineering &amp; growth team · marketplace and OEM build-out.</p>
+        </div>
+        <div class="invest-card reveal">
+          <div class="i-tag i-tag-lime">SCALE GOAL</div>
+          <h3>50K → 500K+ MAU</h3>
+          <p>Own the holistic-health category in India, then expand globally.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section pitch-section">
+      <div class="ps-label reveal">TEAM &amp; VISION</div>
+      <h2 class="reveal">The Team Building It — <span class="grad-text">and Living It.</span></h2>
+      <p class="ps-sub reveal"><em>"Golden age of data, dark age of insight — Fitup is the AI that closes the gap."</em></p>
+
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="t-avatar">SG</div>
+          <h3>Sumeet Gupta</h3>
+          <div class="t-role">Founder</div>
+          <p>Lost 67 lbs with the connected plan Fitup automates. Founder of Innoval Digital Solutions (400+ enterprise clients).</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="t-avatar">PS</div>
+          <h3>Pradeep Sharma</h3>
+          <div class="t-role">Operator</div>
+          <p>Fit founder of a bakery chain. Knows the health-and-business balance firsthand.</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="t-avatar">AN</div>
+          <h3>Anurag Nagar</h3>
+          <div class="t-role">Target User</div>
+          <p>Our target user — getting fit while managing migraines. Real-world validation built in.</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="t-avatar">PSh</div>
+          <h3>Prachi Shallaya</h3>
+          <div class="t-role">Community &amp; Growth</div>
+          <p>Our fitness-community voice — driving engagement and retention.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta reveal">
+      <div class="cta-inner">
+        <div class="cta-spark">✦</div>
+        <h2>Want to back this?</h2>
+        <p>Reach out to talk investment, corporate pilots, or expert marketplace partnerships.</p>
+        <a class="btn btn-primary btn-xl" href="mailto:sumeetonline90@gmail.com?subject=Fitup%20pitch">
+          Get in touch <span class="arrow">→</span>
+        </a>
+        <div class="cta-meta">sumeetonline90@gmail.com</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-row">
+      <div class="brand">
+        <img class="brand-mark" src="assets/logo.png" alt="Fitup logo">
+        <span class="brand-name">fitup</span>
+        <span class="brand-tag">.ai</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">Web App</a>
+        <a href="index.html#partners">Partners</a>
+        <a href="index.html#pricing">Pricing</a>
+      </div>
+    </div>
+    <div class="footer-fine">© <span id="year"></span> Sumeet Gupta · Holistic Health AI</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
