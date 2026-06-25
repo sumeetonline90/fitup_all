@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0E0E0E">
+  <meta name="color-scheme" content="dark">
+  <title>Fitup — Holistic Health AI</title>
+  <meta name="description" content="Track activity, diet, workouts, sleep, and mental wellbeing — guided by a Gemini-powered AI coach. iOS, Android, and Web.">
+  <meta property="og:title" content="Fitup — Holistic Health AI">
+  <meta property="og:description" content="One app for your whole health. Activity, diet, workouts, vitals, mental wellbeing — coached by AI.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-glow bg-glow-cyan"></div>
+  <div class="bg-glow bg-glow-magenta"></div>
+  <div class="bg-glow bg-glow-lime"></div>
+
+  <header class="nav">
+    <a href="#" class="brand">
+      <span class="brand-mark">♥</span>
+      <span class="brand-name">fitup</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#ai">AI Coach</a>
+      <a href="#how">How it works</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">Open Web App →</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <div class="eyebrow">HOLISTIC HEALTH AI</div>
+        <h1>One app for your <span class="grad-text">whole</span> health.</h1>
+        <p class="lede">
+          Track activity, diet, workouts, vitals, and mental wellbeing in one place —
+          coached by an AI that sees how every part of your day connects.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">Try the Web App</a>
+          <a class="btn btn-ghost" href="#features">See features</a>
+        </div>
+        <div class="hero-meta">
+          <span class="dot dot-cyan"></span> iOS &nbsp;
+          <span class="dot dot-magenta"></span> Android &nbsp;
+          <span class="dot dot-lime"></span> Web
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="ring">
+              <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="42" stroke="rgba(255,255,255,0.06)" stroke-width="6" fill="none"/>
+                <circle class="ring-progress" cx="50" cy="50" r="42" stroke="url(#g1)" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="60" transform="rotate(-90 50 50)"/>
+                <defs>
+                  <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#00E5FF"/>
+                    <stop offset="0.5" stop-color="#3D5AFE"/>
+                    <stop offset="1" stop-color="#FF006E"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="ring-center">
+                <div class="ring-num">8,420</div>
+                <div class="ring-lbl">STEPS</div>
+              </div>
+            </div>
+            <div class="mini-cards">
+              <div class="mini">
+                <div class="mini-lbl">DIET</div>
+                <div class="mini-val">1,420 <span>cal</span></div>
+                <div class="bar"><div class="bar-fill" style="width:72%"></div></div>
+              </div>
+              <div class="mini">
+                <div class="mini-lbl">SLEEP</div>
+                <div class="mini-val">7h 28m</div>
+                <div class="bar"><div class="bar-fill bar-magenta" style="width:86%"></div></div>
+              </div>
+            </div>
+            <div class="ai-pill">
+              <span class="ai-spark">✦</span>
+              <span>Walk after dinner — your sleep score lifts ~12%.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-head">
+        <div class="eyebrow">MODULES</div>
+        <h2>Everything that affects your health — in one place.</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card card-glow-cyan">
+          <div class="card-icon">🏃</div>
+          <h3>Activity</h3>
+          <p>GPS tracking, step counts, route maps, and daily/weekly goals — works offline on mobile, syncs everywhere.</p>
+        </div>
+        <div class="card card-glow-lime">
+          <div class="card-icon">🍽️</div>
+          <h3>Diet</h3>
+          <p>Log meals by photo, barcode, or search. Macros, hydration, micronutrients — all auto-calculated.</p>
+        </div>
+        <div class="card card-glow-magenta">
+          <div class="card-icon">💪</div>
+          <h3>Workout</h3>
+          <p>AI-built strength + cardio plans tailored to your equipment, schedule, and recovery.</p>
+        </div>
+        <div class="card card-glow-cyan">
+          <div class="card-icon">❤️</div>
+          <h3>Health &amp; Vitals</h3>
+          <p>Lab report scan, vitals trends, Health Connect / HealthKit sync, and abnormal-range alerts.</p>
+        </div>
+        <div class="card card-glow-magenta">
+          <div class="card-icon">🧘</div>
+          <h3>Mental Wellbeing</h3>
+          <p>Mood, stress, meditation, breathing — with weekly insights on what actually moves the needle.</p>
+        </div>
+        <div class="card card-glow-lime">
+          <div class="card-icon">👥</div>
+          <h3>Community</h3>
+          <p>Duels, challenges, leaderboards, and Fitcoins — gamified accountability without the noise.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai" class="section section-narrow">
+      <div class="ai-block">
+        <div class="ai-block-text">
+          <div class="eyebrow">AI COACH</div>
+          <h2>It connects what other apps miss.</h2>
+          <p>
+            Most apps look at one thing at a time. Fitup's coach sees how your sleep
+            shapes your appetite, how your workouts shift your stress, how your
+            steps move your vitals. It surfaces what to do next — never a diagnosis,
+            always a nudge.
+          </p>
+          <ul class="bullets">
+            <li>Personalized daily briefing</li>
+            <li>Holistic plan: activity + diet + workout + recovery</li>
+            <li>Weekly report tying it all together</li>
+            <li>Conversation-based coach when you want to dig in</li>
+          </ul>
+        </div>
+        <div class="ai-block-art">
+          <div class="ai-card">
+            <div class="ai-card-head">
+              <span class="ai-spark">✦</span>
+              <span class="ai-card-title">This morning</span>
+            </div>
+            <div class="ai-card-body">
+              Yesterday's steps were down and sleep ran short — keep today's calorie
+              target steady but lean into 20 min of zone-2 walking after lunch.
+              Your stress trend says recovery first, push tomorrow.
+            </div>
+          </div>
+          <div class="ai-card ai-card-offset">
+            <div class="ai-card-head">
+              <span class="ai-spark">✦</span>
+              <span class="ai-card-title">Weekly insight</span>
+            </div>
+            <div class="ai-card-body">
+              Your best sleep nights this week followed walks after 7pm. Want me
+              to build that into the plan?
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <div class="section-head">
+        <div class="eyebrow">HOW IT WORKS</div>
+        <h2>Set up in 3 minutes.</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Tell Fitup about you</h3>
+          <p>Quick onboarding — goals, lifestyle, what you want to change.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Get a holistic plan</h3>
+          <p>AI generates a connected plan across activity, diet, workouts, and recovery.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Track and adjust</h3>
+          <p>Log easily, see what's working, and let the coach evolve the plan with you.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="section section-narrow">
+      <div class="privacy">
+        <div class="eyebrow">PRIVACY &amp; SAFETY</div>
+        <h2>Your health data stays yours.</h2>
+        <div class="privacy-grid">
+          <div class="privacy-item">
+            <h4>Encrypted at rest</h4>
+            <p>All health data is encrypted in storage. Firebase-backed with strict per-user access rules.</p>
+          </div>
+          <div class="privacy-item">
+            <h4>No PII to AI</h4>
+            <p>AI prompts are sanitized and anonymized — your identity is never sent to the model.</p>
+          </div>
+          <div class="privacy-item">
+            <h4>Never a diagnosis</h4>
+            <p>The coach hedges with care ("consider", "you may want to") — not medical advice.</p>
+          </div>
+          <div class="privacy-item">
+            <h4>Delete anything, anytime</h4>
+            <p>Account deletion is a full cascade across Firestore, Storage, and Auth. Truly gone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Ready to take care of <span class="grad-text">all</span> of you?</h2>
+      <p>Open the web app in seconds — no install required.</p>
+      <a class="btn btn-primary btn-lg" href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">Launch Fitup →</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-row">
+      <div class="brand">
+        <span class="brand-mark">♥</span>
+        <span class="brand-name">fitup</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/sumeetonline90/fitup_all" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">Web App</a>
+        <a href="#privacy">Privacy</a>
+      </div>
+    </div>
+    <div class="footer-fine">© <span id="year"></span> Sumeet Gupta · Holistic Health AI</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
