@@ -169,13 +169,13 @@ main { position: relative; z-index: 2; }
 }
 .brand { display: flex; align-items: center; gap: 6px; }
 .brand-mark {
-  font-size: 22px;
-  background: linear-gradient(135deg, var(--green), var(--cyan));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 0 12px rgba(0, 229, 255, 0.4));
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 14px rgba(0, 229, 255, 0.45));
+  transition: transform 0.3s ease;
 }
+.brand:hover .brand-mark { transform: rotate(-8deg) scale(1.06); }
 .brand-name {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
@@ -754,14 +754,23 @@ main { position: relative; z-index: 2; }
 .lb-me .lb-rank, .lb-me .lb-name { color: var(--lime); }
 .fc-pill {
   margin-top: 6px;
-  padding: 8px;
-  text-align: center;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   background: linear-gradient(90deg, rgba(184, 230, 0, 0.12), rgba(0, 229, 255, 0.08));
   border: 1px solid rgba(184, 230, 0, 0.3);
   border-radius: 10px;
   font-size: 12px;
   font-weight: 600;
   color: var(--lime);
+}
+.fc-pill img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(184, 230, 0, 0.5));
 }
 
 /* ============================================
