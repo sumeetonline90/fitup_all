@@ -6,233 +6,523 @@
   <meta name="theme-color" content="#0E0E0E">
   <meta name="color-scheme" content="dark">
   <title>Fitup — Holistic Health AI</title>
-  <meta name="description" content="Track activity, diet, workouts, sleep, and mental wellbeing — guided by a Gemini-powered AI coach. iOS, Android, and Web.">
+  <meta name="description" content="The first app that sees your whole health. Activity, diet, workouts, vitals, mental wellbeing — coached by an AI that connects every signal.">
   <meta property="og:title" content="Fitup — Holistic Health AI">
-  <meta property="og:description" content="One app for your whole health. Activity, diet, workouts, vitals, mental wellbeing — coached by AI.">
+  <meta property="og:description" content="One app for your whole health, coached by AI. iOS · Android · Web.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg-glow bg-glow-cyan"></div>
-  <div class="bg-glow bg-glow-magenta"></div>
-  <div class="bg-glow bg-glow-lime"></div>
 
+  <!-- Animated background -->
+  <div class="bg-mesh">
+    <div class="orb orb-cyan"></div>
+    <div class="orb orb-magenta"></div>
+    <div class="orb orb-lime"></div>
+    <div class="orb orb-blue"></div>
+  </div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Nav -->
   <header class="nav">
     <a href="#" class="brand">
       <span class="brand-mark">♥</span>
       <span class="brand-name">fitup</span>
+      <span class="brand-tag">.ai</span>
     </a>
     <nav class="nav-links">
-      <a href="#features">Features</a>
+      <a href="#modules">Modules</a>
       <a href="#ai">AI Coach</a>
       <a href="#how">How it works</a>
-      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn-primary btn-sm" href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">Open Web App →</a>
+    <a class="btn btn-primary btn-sm" href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">
+      Launch App <span class="arrow">→</span>
+    </a>
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-text">
-        <div class="eyebrow">HOLISTIC HEALTH AI</div>
-        <h1>One app for your <span class="grad-text">whole</span> health.</h1>
-        <p class="lede">
-          Track activity, diet, workouts, vitals, and mental wellbeing in one place —
-          coached by an AI that sees how every part of your day connects.
+        <div class="badge reveal">
+          <span class="badge-dot"></span>
+          Now live on web · iOS &amp; Android coming
+        </div>
+        <h1 class="reveal">
+          One coach.<br>
+          <span class="grad-text">Your whole</span><br>
+          health.
+        </h1>
+        <p class="lede reveal">
+          Activity, diet, workouts, vitals, sleep, and mental wellbeing —
+          tracked in one place and connected by an AI coach that sees how
+          every part of your day shapes every other.
         </p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">Try the Web App</a>
-          <a class="btn btn-ghost" href="#features">See features</a>
+        <div class="hero-cta reveal">
+          <a class="btn btn-primary btn-lg" href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">
+            Try Fitup Free <span class="arrow">→</span>
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#modules">See modules</a>
         </div>
-        <div class="hero-meta">
-          <span class="dot dot-cyan"></span> iOS &nbsp;
-          <span class="dot dot-magenta"></span> Android &nbsp;
-          <span class="dot dot-lime"></span> Web
+        <div class="hero-meta reveal">
+          <div class="stat">
+            <div class="stat-num" data-count="9">0</div>
+            <div class="stat-lbl">Connected modules</div>
+          </div>
+          <div class="divider"></div>
+          <div class="stat">
+            <div class="stat-num" data-count="3">0</div>
+            <div class="stat-lbl">Platforms</div>
+          </div>
+          <div class="divider"></div>
+          <div class="stat">
+            <div class="stat-num" data-count="24" data-suffix="/7">0</div>
+            <div class="stat-lbl">AI on-call</div>
+          </div>
         </div>
       </div>
-      <div class="hero-art">
-        <div class="phone-frame">
-          <div class="phone-screen">
-            <div class="ring">
-              <svg viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="42" stroke="rgba(255,255,255,0.06)" stroke-width="6" fill="none"/>
-                <circle class="ring-progress" cx="50" cy="50" r="42" stroke="url(#g1)" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="60" transform="rotate(-90 50 50)"/>
-                <defs>
-                  <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-                    <stop offset="0" stop-color="#00E5FF"/>
-                    <stop offset="0.5" stop-color="#3D5AFE"/>
-                    <stop offset="1" stop-color="#FF006E"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <div class="ring-center">
-                <div class="ring-num">8,420</div>
-                <div class="ring-lbl">STEPS</div>
+
+      <!-- Hero art: phone + floating cards -->
+      <div class="hero-art reveal">
+        <div class="hero-stage">
+          <div class="floater floater-1">
+            <div class="float-card float-mood">
+              <div class="fc-row"><span class="fc-lbl">MOOD</span><span class="fc-val">7.8</span></div>
+              <div class="mood-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="floater floater-2">
+            <div class="float-card float-sleep">
+              <div class="fc-row"><span class="fc-lbl">SLEEP</span><span class="fc-val">7h 28m</span></div>
+              <svg viewBox="0 0 100 30" class="sleep-wave"><path d="M0 18 Q 15 4 30 18 T 60 18 T 100 18" fill="none" stroke="url(#sleepG)" stroke-width="2.5"/><defs><linearGradient id="sleepG"><stop offset="0" stop-color="#FF006E"/><stop offset="1" stop-color="#00E5FF"/></linearGradient></defs></svg>
+            </div>
+          </div>
+          <div class="floater floater-3">
+            <div class="float-card float-meal">
+              <div class="fc-row"><span class="fc-lbl">DIET</span><span class="fc-val">1,420 cal</span></div>
+              <div class="macros">
+                <div><span class="m-c"></span><span>P 84g</span></div>
+                <div><span class="m-c m-y"></span><span>C 162g</span></div>
+                <div><span class="m-c m-m"></span><span>F 48g</span></div>
               </div>
             </div>
-            <div class="mini-cards">
-              <div class="mini">
-                <div class="mini-lbl">DIET</div>
-                <div class="mini-val">1,420 <span>cal</span></div>
-                <div class="bar"><div class="bar-fill" style="width:72%"></div></div>
+          </div>
+
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="ps-greet">
+                <div class="ps-eyebrow">GOOD MORNING</div>
+                <div class="ps-hello">Hello, Sumeet</div>
               </div>
-              <div class="mini">
-                <div class="mini-lbl">SLEEP</div>
-                <div class="mini-val">7h 28m</div>
-                <div class="bar"><div class="bar-fill bar-magenta" style="width:86%"></div></div>
+              <div class="ring-wrap">
+                <svg viewBox="0 0 120 120" class="ring-svg">
+                  <circle cx="60" cy="60" r="52" stroke="rgba(255,255,255,0.06)" stroke-width="7" fill="none"/>
+                  <circle class="ring-progress" cx="60" cy="60" r="52" stroke="url(#ringG)" stroke-width="7" fill="none" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="80" transform="rotate(-90 60 60)"/>
+                  <defs><linearGradient id="ringG" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#00E5FF"/><stop offset="0.5" stop-color="#3D5AFE"/><stop offset="1" stop-color="#FF006E"/></linearGradient></defs>
+                </svg>
+                <div class="ring-center">
+                  <div class="ring-num">8,420</div>
+                  <div class="ring-lbl">STEPS · 76% of goal</div>
+                </div>
               </div>
-            </div>
-            <div class="ai-pill">
-              <span class="ai-spark">✦</span>
-              <span>Walk after dinner — your sleep score lifts ~12%.</span>
+              <div class="ps-mini">
+                <div class="ps-mini-card">
+                  <div class="ps-mini-lbl">DISTANCE</div>
+                  <div class="ps-mini-val">6.2 km</div>
+                </div>
+                <div class="ps-mini-card">
+                  <div class="ps-mini-lbl">CALORIES</div>
+                  <div class="ps-mini-val">421</div>
+                </div>
+              </div>
+              <div class="ps-ai">
+                <span class="ps-ai-spark">✦</span>
+                <span>Walk after dinner — your sleep score lifts ~12%.</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="features" class="section">
-      <div class="section-head">
-        <div class="eyebrow">MODULES</div>
-        <h2>Everything that affects your health — in one place.</h2>
+    <!-- MARQUEE -->
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>✦ Activity</span>
+        <span>✦ Diet &amp; Nutrition</span>
+        <span>✦ Workouts</span>
+        <span>✦ Health Vitals</span>
+        <span>✦ Mental Wellbeing</span>
+        <span>✦ Sleep Insights</span>
+        <span>✦ AI Coach</span>
+        <span>✦ Community</span>
+        <span>✦ Fitcoins</span>
+        <span>✦ Holistic Plan</span>
+        <span>✦ Activity</span>
+        <span>✦ Diet &amp; Nutrition</span>
+        <span>✦ Workouts</span>
+        <span>✦ Health Vitals</span>
+        <span>✦ Mental Wellbeing</span>
+        <span>✦ Sleep Insights</span>
+        <span>✦ AI Coach</span>
+        <span>✦ Community</span>
+        <span>✦ Fitcoins</span>
+        <span>✦ Holistic Plan</span>
       </div>
-      <div class="grid grid-3">
-        <div class="card card-glow-cyan">
-          <div class="card-icon">🏃</div>
-          <h3>Activity</h3>
-          <p>GPS tracking, step counts, route maps, and daily/weekly goals — works offline on mobile, syncs everywhere.</p>
-        </div>
-        <div class="card card-glow-lime">
-          <div class="card-icon">🍽️</div>
-          <h3>Diet</h3>
-          <p>Log meals by photo, barcode, or search. Macros, hydration, micronutrients — all auto-calculated.</p>
-        </div>
-        <div class="card card-glow-magenta">
-          <div class="card-icon">💪</div>
-          <h3>Workout</h3>
-          <p>AI-built strength + cardio plans tailored to your equipment, schedule, and recovery.</p>
-        </div>
-        <div class="card card-glow-cyan">
-          <div class="card-icon">❤️</div>
-          <h3>Health &amp; Vitals</h3>
-          <p>Lab report scan, vitals trends, Health Connect / HealthKit sync, and abnormal-range alerts.</p>
-        </div>
-        <div class="card card-glow-magenta">
-          <div class="card-icon">🧘</div>
-          <h3>Mental Wellbeing</h3>
-          <p>Mood, stress, meditation, breathing — with weekly insights on what actually moves the needle.</p>
-        </div>
-        <div class="card card-glow-lime">
-          <div class="card-icon">👥</div>
-          <h3>Community</h3>
-          <p>Duels, challenges, leaderboards, and Fitcoins — gamified accountability without the noise.</p>
-        </div>
-      </div>
-    </section>
+    </div>
 
-    <section id="ai" class="section section-narrow">
-      <div class="ai-block">
-        <div class="ai-block-text">
-          <div class="eyebrow">AI COACH</div>
-          <h2>It connects what other apps miss.</h2>
+    <!-- WHY -->
+    <section class="section section-narrow">
+      <div class="why-grid reveal">
+        <div class="why-text">
+          <div class="eyebrow">THE PROBLEM</div>
+          <h2>You don't have <span class="grad-text">5 health problems.</span> You have one.</h2>
           <p>
-            Most apps look at one thing at a time. Fitup's coach sees how your sleep
-            shapes your appetite, how your workouts shift your stress, how your
-            steps move your vitals. It surfaces what to do next — never a diagnosis,
-            always a nudge.
+            Your sleep affects your appetite. Your workouts shift your stress.
+            Your stress changes your blood pressure. Your blood pressure changes
+            what workouts make sense.
           </p>
-          <ul class="bullets">
-            <li>Personalized daily briefing</li>
-            <li>Holistic plan: activity + diet + workout + recovery</li>
-            <li>Weekly report tying it all together</li>
-            <li>Conversation-based coach when you want to dig in</li>
-          </ul>
+          <p>
+            But you're tracking it in five different apps that never talk to each
+            other. <strong style="color: var(--text);">Fitup is one brain for all of it.</strong>
+          </p>
         </div>
-        <div class="ai-block-art">
-          <div class="ai-card">
-            <div class="ai-card-head">
-              <span class="ai-spark">✦</span>
-              <span class="ai-card-title">This morning</span>
-            </div>
-            <div class="ai-card-body">
-              Yesterday's steps were down and sleep ran short — keep today's calorie
-              target steady but lean into 20 min of zone-2 walking after lunch.
-              Your stress trend says recovery first, push tomorrow.
+        <div class="why-art">
+          <div class="connection">
+            <div class="node node-1">Activity</div>
+            <div class="node node-2">Diet</div>
+            <div class="node node-3">Sleep</div>
+            <div class="node node-4">Stress</div>
+            <div class="node node-5">Vitals</div>
+            <div class="node node-6">Workout</div>
+            <svg class="connection-lines" viewBox="0 0 400 400">
+              <g stroke="url(#connG)" stroke-width="1" fill="none" opacity="0.6">
+                <line x1="200" y1="60" x2="80" y2="200" class="ln"/>
+                <line x1="200" y1="60" x2="320" y2="200" class="ln"/>
+                <line x1="80" y1="200" x2="200" y2="340" class="ln"/>
+                <line x1="320" y1="200" x2="200" y2="340" class="ln"/>
+                <line x1="200" y1="60" x2="200" y2="340" class="ln"/>
+                <line x1="80" y1="200" x2="320" y2="200" class="ln"/>
+                <line x1="200" y1="60" x2="120" y2="340" class="ln"/>
+                <line x1="200" y1="60" x2="280" y2="340" class="ln"/>
+              </g>
+              <defs>
+                <linearGradient id="connG" x1="0" x2="1">
+                  <stop offset="0" stop-color="#00E5FF" stop-opacity="0.6"/>
+                  <stop offset="0.5" stop-color="#3D5AFE" stop-opacity="0.6"/>
+                  <stop offset="1" stop-color="#FF006E" stop-opacity="0.6"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULES -->
+    <section id="modules" class="section">
+      <div class="section-head reveal">
+        <div class="eyebrow">9 MODULES · 1 BRAIN</div>
+        <h2>Everything that shapes your health, <span class="grad-text">in one place.</span></h2>
+        <p class="section-sub">Each module is fully featured on its own. The magic is how they talk to each other.</p>
+      </div>
+
+      <div class="modules-grid">
+
+        <div class="module-card mc-cyan reveal">
+          <div class="mc-header">
+            <div class="mc-icon">🏃</div>
+            <div class="mc-meta">
+              <div class="mc-tag">ACTIVITY</div>
+              <h3>Move with intent</h3>
             </div>
           </div>
-          <div class="ai-card ai-card-offset">
-            <div class="ai-card-head">
-              <span class="ai-spark">✦</span>
-              <span class="ai-card-title">Weekly insight</span>
+          <p>GPS tracking, step counts, route maps, calorie burn — works offline on mobile, syncs live across devices.</p>
+          <div class="mock mock-activity">
+            <div class="m-ring">
+              <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" stroke="rgba(255,255,255,0.08)" stroke-width="4" fill="none"/><circle cx="30" cy="30" r="25" stroke="#00E5FF" stroke-width="4" fill="none" stroke-dasharray="157" stroke-dashoffset="38" stroke-linecap="round" transform="rotate(-90 30 30)"/></svg>
+              <div class="m-ring-c">76%</div>
             </div>
-            <div class="ai-card-body">
-              Your best sleep nights this week followed walks after 7pm. Want me
-              to build that into the plan?
+            <div class="m-stats">
+              <div><div class="ms-v">8,420</div><div class="ms-l">steps</div></div>
+              <div><div class="ms-v">6.2km</div><div class="ms-l">distance</div></div>
+              <div><div class="ms-v">421</div><div class="ms-l">kcal</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-card mc-lime reveal">
+          <div class="mc-header">
+            <div class="mc-icon">🍽️</div>
+            <div class="mc-meta">
+              <div class="mc-tag">DIET</div>
+              <h3>Log without friction</h3>
+            </div>
+          </div>
+          <p>Photo capture, barcode scan, or smart search. Macros, hydration, and micronutrients auto-calculated.</p>
+          <div class="mock mock-diet">
+            <div class="mock-row"><span>🥗</span><div class="mr-name">Lunch · Quinoa Bowl</div><div class="mr-cal">620 kcal</div></div>
+            <div class="mock-row"><span>☕</span><div class="mr-name">Coffee, oat milk</div><div class="mr-cal">90 kcal</div></div>
+            <div class="mock-row"><span>🍎</span><div class="mr-name">Apple, almonds</div><div class="mr-cal">210 kcal</div></div>
+            <div class="diet-bar"><div class="diet-fill"></div></div>
+            <div class="diet-totals">1,420 of 2,000 kcal · 580 left</div>
+          </div>
+        </div>
+
+        <div class="module-card mc-magenta reveal">
+          <div class="mc-header">
+            <div class="mc-icon">💪</div>
+            <div class="mc-meta">
+              <div class="mc-tag">WORKOUT</div>
+              <h3>Plans that adapt</h3>
+            </div>
+          </div>
+          <p>AI-built strength + cardio routines tuned to your equipment, schedule, energy, and recovery state.</p>
+          <div class="mock mock-workout">
+            <div class="wo-day">
+              <div class="wo-d">MON</div>
+              <div class="wo-name">Push Day · 4 exercises</div>
+              <div class="wo-status wo-done">DONE</div>
+            </div>
+            <div class="wo-day">
+              <div class="wo-d">WED</div>
+              <div class="wo-name">Pull Day · 5 exercises</div>
+              <div class="wo-status wo-now">TODAY</div>
+            </div>
+            <div class="wo-day wo-future">
+              <div class="wo-d">FRI</div>
+              <div class="wo-name">Legs · 4 exercises</div>
+              <div class="wo-status">UP NEXT</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-card mc-cyan reveal">
+          <div class="mc-header">
+            <div class="mc-icon">❤️</div>
+            <div class="mc-meta">
+              <div class="mc-tag">HEALTH &amp; VITALS</div>
+              <h3>Labs, trends, alerts</h3>
+            </div>
+          </div>
+          <p>Lab report scan with AI extraction, vitals trends, Health Connect / HealthKit sync, and abnormal-range alerts.</p>
+          <div class="mock mock-vitals">
+            <div class="vital"><div class="vital-name">HbA1c</div><div class="vital-val">5.1<span>%</span></div><div class="vital-dot dot-lime"></div></div>
+            <div class="vital"><div class="vital-name">Blood Pressure</div><div class="vital-val">122/78</div><div class="vital-dot dot-lime"></div></div>
+            <div class="vital"><div class="vital-name">Vitamin D</div><div class="vital-val">22<span>ng/mL</span></div><div class="vital-dot dot-magenta"></div></div>
+          </div>
+        </div>
+
+        <div class="module-card mc-magenta reveal">
+          <div class="mc-header">
+            <div class="mc-icon">🧘</div>
+            <div class="mc-meta">
+              <div class="mc-tag">MENTAL WELLBEING</div>
+              <h3>Mind on the map</h3>
+            </div>
+          </div>
+          <p>Mood, stress, meditation, breathing. Weekly insights on what actually moves your wellbeing — backed by data.</p>
+          <div class="mock mock-mental">
+            <div class="mood-row">
+              <div class="mood-day"><div class="mb"><span style="height:60%"></span></div><div>M</div></div>
+              <div class="mood-day"><div class="mb"><span style="height:75%"></span></div><div>T</div></div>
+              <div class="mood-day"><div class="mb"><span style="height:50%"></span></div><div>W</div></div>
+              <div class="mood-day"><div class="mb"><span style="height:82%"></span></div><div>T</div></div>
+              <div class="mood-day"><div class="mb"><span style="height:90%"></span></div><div>F</div></div>
+              <div class="mood-day"><div class="mb"><span style="height:78%"></span></div><div>S</div></div>
+              <div class="mood-day"><div class="mb"><span style="height:88%"></span></div><div>S</div></div>
+            </div>
+            <div class="mental-foot">Avg mood <strong>7.5</strong> · Stress <strong>low</strong></div>
+          </div>
+        </div>
+
+        <div class="module-card mc-lime reveal">
+          <div class="mc-header">
+            <div class="mc-icon">👥</div>
+            <div class="mc-meta">
+              <div class="mc-tag">COMMUNITY · FITCOINS</div>
+              <h3>Accountability, gamified</h3>
+            </div>
+          </div>
+          <p>Duels, public challenges, leaderboards, and Fitcoins you actually earn. Compete without the noise.</p>
+          <div class="mock mock-community">
+            <div class="lb"><span class="lb-rank">1</span><span class="lb-name">Priya S.</span><span class="lb-pts">2,840</span></div>
+            <div class="lb lb-me"><span class="lb-rank">2</span><span class="lb-name">You</span><span class="lb-pts">2,460</span></div>
+            <div class="lb"><span class="lb-rank">3</span><span class="lb-name">Rohan K.</span><span class="lb-pts">2,210</span></div>
+            <div class="fc-pill">+ 280 Fitcoins this week</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AI COACH -->
+    <section id="ai" class="section section-narrow">
+      <div class="ai-hero reveal">
+        <div class="ai-hero-text">
+          <div class="eyebrow">AI COACH · POWERED BY GEMINI</div>
+          <h2>A coach that sees <span class="grad-text">everything</span> about you.</h2>
+          <p>
+            Other apps look at one thing at a time. Fitup's coach reads your sleep,
+            steps, meals, mood, and vitals together — and tells you what to do next.
+          </p>
+          <div class="ai-features">
+            <div class="ai-feat"><span class="af-icon">✦</span><div><strong>Daily briefing</strong><div>What today should look like, based on yesterday.</div></div></div>
+            <div class="ai-feat"><span class="af-icon">✦</span><div><strong>Holistic plan</strong><div>Activity + diet + workout + recovery, all aligned.</div></div></div>
+            <div class="ai-feat"><span class="af-icon">✦</span><div><strong>Weekly report</strong><div>What worked, what didn't, what's next.</div></div></div>
+            <div class="ai-feat"><span class="af-icon">✦</span><div><strong>Chat anytime</strong><div>Ask "should I run today?" and get a real answer.</div></div></div>
+          </div>
+        </div>
+
+        <div class="ai-chat reveal">
+          <div class="ai-chat-head">
+            <div class="ai-avatar">✦</div>
+            <div>
+              <div class="ai-name">Fitup Coach</div>
+              <div class="ai-status"><span class="status-dot"></span> Online · sees your full context</div>
+            </div>
+          </div>
+          <div class="ai-thread" id="aiThread">
+            <div class="bubble bubble-user">Should I run today? I'm a bit tired.</div>
+            <div class="bubble bubble-ai" data-typed="Looking at the full picture: you slept 6h 14m (low), stress was elevated yesterday, and your last hard run was 36 hours ago. I'd skip the hard run — try a 25 min easy walk + 10 min mobility. Your readiness rebounds tomorrow.">
+              <span class="typing"><span></span><span></span><span></span></span>
+            </div>
+            <div class="bubble bubble-user">And what about dinner?</div>
+            <div class="bubble bubble-ai bubble-pending" data-typed="Lean on protein + slow carbs to support recovery — say grilled fish, sweet potato, greens. Keep alcohol to zero tonight; even 1 drink would push your sleep further down. Hydrate well after 8pm.">
+              <span class="typing"><span></span><span></span><span></span></span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- HOW IT WORKS -->
     <section id="how" class="section">
-      <div class="section-head">
+      <div class="section-head reveal">
         <div class="eyebrow">HOW IT WORKS</div>
-        <h2>Set up in 3 minutes.</h2>
+        <h2>Set up in <span class="grad-text">3 minutes.</span> Coached for life.</h2>
       </div>
-      <div class="grid grid-3">
-        <div class="step">
+      <div class="steps">
+        <div class="step reveal">
           <div class="step-num">01</div>
           <h3>Tell Fitup about you</h3>
-          <p>Quick onboarding — goals, lifestyle, what you want to change.</p>
+          <p>Quick onboarding — goals, lifestyle, what you want to change. No medical questionnaire.</p>
+          <div class="step-line"></div>
         </div>
-        <div class="step">
+        <div class="step reveal">
           <div class="step-num">02</div>
-          <h3>Get a holistic plan</h3>
-          <p>AI generates a connected plan across activity, diet, workouts, and recovery.</p>
+          <h3>Get a connected plan</h3>
+          <p>AI generates an activity, diet, workout, and recovery plan that all line up with each other.</p>
+          <div class="step-line"></div>
         </div>
-        <div class="step">
+        <div class="step reveal">
           <div class="step-num">03</div>
-          <h3>Track and adjust</h3>
-          <p>Log easily, see what's working, and let the coach evolve the plan with you.</p>
+          <h3>Track. Learn. Adjust.</h3>
+          <p>Log easily. See what's working. The coach evolves the plan with you, week by week.</p>
         </div>
       </div>
     </section>
 
-    <section id="privacy" class="section section-narrow">
-      <div class="privacy">
+    <!-- TECH -->
+    <section class="section section-narrow">
+      <div class="tech reveal">
+        <div class="eyebrow">BUILT MODERN</div>
+        <h2>Engineered for trust, speed, and scale.</h2>
+        <div class="tech-grid">
+          <div class="tech-item"><div class="ti-name">Flutter</div><div class="ti-desc">One codebase · iOS · Android · Web</div></div>
+          <div class="tech-item"><div class="ti-name">Firebase</div><div class="ti-desc">Auth · Firestore · Functions · Storage</div></div>
+          <div class="tech-item"><div class="ti-name">Gemini AI</div><div class="ti-desc">2.0 Flash for realtime · 1.5 Pro weekly</div></div>
+          <div class="tech-item"><div class="ti-name">Drift / SQLite</div><div class="ti-desc">Offline-first local storage</div></div>
+          <div class="tech-item"><div class="ti-name">Health Connect</div><div class="ti-desc">+ HealthKit native integration</div></div>
+          <div class="tech-item"><div class="ti-name">RevenueCat</div><div class="ti-desc">Subscriptions · cross-platform</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACY -->
+    <section class="section section-narrow">
+      <div class="privacy reveal">
         <div class="eyebrow">PRIVACY &amp; SAFETY</div>
-        <h2>Your health data stays yours.</h2>
+        <h2>Your health data <span class="grad-text">stays yours.</span></h2>
         <div class="privacy-grid">
           <div class="privacy-item">
+            <div class="pi-icon">🔒</div>
             <h4>Encrypted at rest</h4>
-            <p>All health data is encrypted in storage. Firebase-backed with strict per-user access rules.</p>
+            <p>All health data encrypted in storage. Strict per-user Firestore rules verified in CI.</p>
           </div>
           <div class="privacy-item">
+            <div class="pi-icon">🎭</div>
             <h4>No PII to AI</h4>
-            <p>AI prompts are sanitized and anonymized — your identity is never sent to the model.</p>
+            <p>AI prompts are sanitized and anonymized — your identity never leaves your account.</p>
           </div>
           <div class="privacy-item">
+            <div class="pi-icon">🤝</div>
             <h4>Never a diagnosis</h4>
             <p>The coach hedges with care ("consider", "you may want to") — not medical advice.</p>
           </div>
           <div class="privacy-item">
+            <div class="pi-icon">🗑️</div>
             <h4>Delete anything, anytime</h4>
-            <p>Account deletion is a full cascade across Firestore, Storage, and Auth. Truly gone.</p>
+            <p>Full cascade across Firestore, Storage, and Auth. Truly gone, not just hidden.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="cta">
-      <h2>Ready to take care of <span class="grad-text">all</span> of you?</h2>
-      <p>Open the web app in seconds — no install required.</p>
-      <a class="btn btn-primary btn-lg" href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">Launch Fitup →</a>
+    <!-- FAQ -->
+    <section id="faq" class="section section-narrow">
+      <div class="section-head reveal">
+        <div class="eyebrow">FAQ</div>
+        <h2>Quick answers.</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>Is Fitup free?<span class="chev">+</span></summary>
+          <div>Yes — the full app is free to use. A Pro tier is coming with advanced AI plans and unlimited insights. The web app is open right now at no cost.</div>
+        </details>
+        <details>
+          <summary>Does it work without GPS or Health Connect?<span class="chev">+</span></summary>
+          <div>Absolutely. GPS and Health Connect are mobile bonuses — every other module (diet, workout, vitals, mental, community, AI coach) works fully on web.</div>
+        </details>
+        <details>
+          <summary>Is the AI giving medical advice?<span class="chev">+</span></summary>
+          <div>No. The coach is built with explicit hedging — it suggests, never prescribes. For diagnosis or treatment, always talk to a clinician.</div>
+        </details>
+        <details>
+          <summary>What about my data?<span class="chev">+</span></summary>
+          <div>Encrypted at rest. Anonymized before any AI call. You can delete your account and everything goes — Firestore, Storage, Auth — in one cascade.</div>
+        </details>
+        <details>
+          <summary>When are iOS and Android apps live?<span class="chev">+</span></summary>
+          <div>Feature-complete and in launch hardening. The web app is fully live now; iOS and Android store submissions are next.</div>
+        </details>
+        <details>
+          <summary>Can I see the code?<span class="chev">+</span></summary>
+          <div>Yes — the codebase is on GitHub at <a href="https://github.com/sumeetonline90/fitup_all" target="_blank" rel="noopener">sumeetonline90/fitup_all</a>.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta reveal">
+      <div class="cta-inner">
+        <div class="cta-spark">✦</div>
+        <h2>Ready to take care of <span class="grad-text">all</span> of you?</h2>
+        <p>Open the web app in seconds. No install, no card, no commitment.</p>
+        <a class="btn btn-primary btn-xl" href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">
+          Launch Fitup Free <span class="arrow">→</span>
+        </a>
+        <div class="cta-meta">Works in any modern browser · 6 MB on first load</div>
+      </div>
     </section>
   </main>
 
@@ -241,14 +531,17 @@
       <div class="brand">
         <span class="brand-mark">♥</span>
         <span class="brand-name">fitup</span>
+        <span class="brand-tag">.ai</span>
       </div>
       <div class="footer-links">
-        <a href="https://github.com/sumeetonline90/fitup_all" target="_blank" rel="noopener">GitHub</a>
         <a href="https://fitup-f5f56.web.app" target="_blank" rel="noopener">Web App</a>
-        <a href="#privacy">Privacy</a>
+        <a href="https://github.com/sumeetonline90/fitup_all" target="_blank" rel="noopener">GitHub</a>
+        <a href="#modules">Modules</a>
+        <a href="#ai">AI Coach</a>
+        <a href="#faq">FAQ</a>
       </div>
     </div>
-    <div class="footer-fine">© <span id="year"></span> Sumeet Gupta · Holistic Health AI</div>
+    <div class="footer-fine">© <span id="year"></span> Sumeet Gupta · Holistic Health AI · Built with Flutter, Firebase, and Gemini</div>
   </footer>
 
   <script src="script.js"></script>
